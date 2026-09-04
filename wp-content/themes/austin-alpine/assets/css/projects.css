@@ -1,0 +1,674 @@
+/**
+ * Projects / case studies.
+ *
+ * Loaded only on the projects archive, the type archives, and single project
+ * pages (see alpine_enqueue_project_assets in functions.php), so the sitewide
+ * stylesheet is untouched.
+ *
+ * Everything below leans on the existing .service-page design tokens — the same
+ * navy palette, Poppins stack, radii, and shadow language used by the service
+ * and commercial templates. No new colors are introduced.
+ */
+
+/* -------------------------------------------------------
+ * Archive intro + filter
+ * ----------------------------------------------------- */
+
+.projects-page .projects-intro {
+  max-width: 68ch;
+  margin-bottom: 2rem;
+}
+
+.projects-page .project-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 0 0 3rem;
+}
+
+.projects-page .project-filter-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.6rem 1.4rem;
+  border-radius: 999px;
+  border: 1px solid rgba(35, 73, 130, 0.22);
+  background: #fff;
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 0.95rem;
+  line-height: 1.2;
+  text-decoration: none;
+  transition: background-color 0.18s ease, color 0.18s ease, border-color 0.18s ease;
+}
+
+.projects-page .project-filter-pill:hover,
+.projects-page .project-filter-pill:focus-visible {
+  background: #eceff5;
+  border-color: rgba(35, 73, 130, 0.4);
+  color: var(--primary-dark);
+}
+
+.projects-page .project-filter-pill.is-active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+}
+
+/* -------------------------------------------------------
+ * Sections + card grid
+ * ----------------------------------------------------- */
+
+.projects-page .project-section + .project-section {
+  margin-top: 4rem;
+}
+
+.projects-page .project-section .service-intro {
+  max-width: 68ch;
+}
+
+.projects-page .project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.projects-page .project-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid rgba(35, 73, 130, 0.12);
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(8, 27, 56, 0.07);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.projects-page .project-card:hover,
+.projects-page .project-card:focus-within {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 44px rgba(8, 27, 56, 0.14);
+}
+
+.projects-page .project-card-media {
+  position: relative;
+  display: block;
+  aspect-ratio: 16 / 10;
+  background: #dfe8f8;
+  overflow: hidden;
+}
+
+.projects-page .project-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.projects-page .project-card-badge {
+  position: absolute;
+  top: 0.85rem;
+  left: 0.85rem;
+  padding: 0.3rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(15, 42, 82, 0.9);
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+/* Placeholder shown until a project has its featured photo. */
+.projects-page .project-media-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #163f7a, #5d88d6);
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.projects-page .project-media-placeholder i {
+  font-size: 2rem;
+}
+
+.projects-page .project-media-placeholder-text {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.projects-page .project-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: 1.4rem 1.5rem 1.6rem;
+  flex: 1;
+}
+
+.projects-page .project-card-location {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin: 0;
+  color: var(--about-muted);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.projects-page .project-card-title {
+  margin: 0;
+  font-size: 1.18rem;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+.projects-page .project-card-title a {
+  color: var(--about-text);
+  text-decoration: none;
+}
+
+.projects-page .project-card-title a:hover,
+.projects-page .project-card-title a:focus-visible {
+  color: var(--primary);
+}
+
+.projects-page .project-card-summary {
+  margin: 0;
+  font-size: 0.97rem;
+  line-height: 1.7;
+  color: #45536d;
+}
+
+.projects-page .project-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: auto;
+  padding-top: 0.4rem;
+  color: var(--primary);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.projects-page .project-card-link:hover,
+.projects-page .project-card-link:focus-visible {
+  color: var(--primary-dark);
+  gap: 0.75rem;
+}
+
+.projects-page .project-card-link i {
+  transition: transform 0.18s ease;
+}
+
+/* -------------------------------------------------------
+ * Single project
+ * ----------------------------------------------------- */
+
+.project-single-page .project-facts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 0 0 3rem;
+  padding: 0;
+}
+
+.project-single-page .project-fact {
+  padding: 1.1rem 1.3rem;
+  background: var(--tertiary-color);
+  border-radius: 0.85rem;
+  border-left: 4px solid var(--about-blue);
+}
+
+.project-single-page .project-fact dt {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin: 0 0 0.35rem;
+  color: var(--about-muted);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.project-single-page .project-fact dd {
+  margin: 0;
+  color: var(--about-text);
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.project-single-page .project-overview-lead {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
+  align-items: start;
+  gap: clamp(2rem, 5vw, 4.5rem);
+}
+
+.project-single-page .project-overview-lead-no-image {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.project-single-page .project-featured-photo {
+  width: 100%;
+  min-height: 0;
+  aspect-ratio: 4 / 3;
+  margin: 0;
+  overflow: hidden;
+}
+
+.project-single-page .project-overview-details {
+  margin-top: 2.5rem;
+}
+
+.project-single-page .project-featured-photo img,
+.project-single-page .project-featured-photo .project-media-placeholder {
+  width: 100%;
+  height: 100%;
+  min-height: 260px;
+  object-fit: cover;
+}
+
+.project-single-page .project-detail-panels {
+  margin-top: 3rem;
+}
+
+/* Jobs that recorded only an issue, or only a work list, get one full-width
+   panel rather than a lone half-width card. */
+.project-single-page .project-detail-panels-single {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.project-single-page .project-detail-panels .service-info-panel h2 {
+  margin: 0 0 0.75rem;
+  font-size: 1.45rem;
+  font-weight: 800;
+}
+
+/* Project story copy.
+   The Overview, Issue and Work Performed fields are a WYSIWYG editor, so this
+   block styles whatever mix of paragraphs, headings, lists, links and emphasis
+   the office writes — on the same type scale the hand-built markup used. */
+.project-single-page .project-rich-text > *:first-child {
+  margin-top: 0;
+}
+
+.project-single-page .project-rich-text > *:last-child {
+  margin-bottom: 0;
+}
+
+.project-single-page .project-rich-text p {
+  margin: 0 0 1.2rem;
+  line-height: 1.85;
+}
+
+.project-single-page .project-overview-copy p {
+  font-size: 1rem;
+  line-height: 1.95;
+}
+
+.project-single-page .project-rich-text h1,
+.project-single-page .project-rich-text h2,
+.project-single-page .project-rich-text h3,
+.project-single-page .project-rich-text h4 {
+  margin: 2rem 0 0.75rem;
+  font-weight: 800;
+  line-height: 1.3;
+  color: inherit;
+}
+
+.project-single-page .project-rich-text h1 {
+  font-size: 1.85rem;
+}
+
+.project-single-page .project-rich-text h2 {
+  font-size: 1.55rem;
+}
+
+.project-single-page .project-rich-text h3 {
+  font-size: 1.3rem;
+}
+
+.project-single-page .project-rich-text h4 {
+  font-size: 1.12rem;
+}
+
+.project-single-page .project-rich-text strong,
+.project-single-page .project-rich-text b {
+  font-weight: 800;
+}
+
+.project-single-page .project-rich-text em,
+.project-single-page .project-rich-text i {
+  font-style: italic;
+}
+
+.project-single-page .project-rich-text a {
+  color: #1d4b90;
+  text-decoration: underline;
+}
+
+.project-single-page .project-rich-text ul,
+.project-single-page .project-rich-text ol {
+  margin: 0 0 1.2rem;
+  padding-left: 1.35rem;
+  line-height: 1.85;
+}
+
+.project-single-page .project-rich-text li {
+  margin-bottom: 0.5rem;
+}
+
+.project-single-page .project-rich-text blockquote {
+  margin: 0 0 1.2rem;
+  padding: 0.25rem 0 0.25rem 1.1rem;
+  border-left: 3px solid rgba(37, 79, 147, 0.35);
+  font-style: italic;
+}
+
+/* The dark Issue panel needs its own link and rule colours. */
+.project-single-page .service-info-panel .project-rich-text a {
+  color: #cfe0ff;
+}
+
+.project-single-page .service-info-panel .project-rich-text blockquote {
+  border-left-color: rgba(255, 255, 255, 0.45);
+}
+
+.project-single-page .service-info-panel-alt .project-rich-text a {
+  color: #1d4b90;
+}
+
+/* Work Performed keeps its check marks whether the list came from the editor
+   or from a project written back when the field was one item per line. */
+.project-single-page .project-work-list ul {
+  margin: 0;
+  padding-left: 1.15rem;
+  list-style: none;
+}
+
+.project-single-page .project-work-list ul li {
+  position: relative;
+  padding-left: 1rem;
+  margin-bottom: 0.6rem;
+  line-height: 1.75;
+}
+
+.project-single-page .project-work-list ul li::before {
+  content: "✓";
+  position: absolute;
+  left: -0.35rem;
+  font-weight: 800;
+}
+
+.project-single-page .project-work-list ul ul {
+  margin-top: 0.6rem;
+}
+
+/* Equipment table */
+.project-single-page .project-equipment,
+.project-single-page .project-gallery,
+.project-single-page .project-related {
+  margin-top: 4rem;
+}
+
+.project-single-page .project-equipment-table-wrap {
+  overflow-x: auto;
+  border: 1px solid rgba(35, 73, 130, 0.14);
+  border-radius: 0.9rem;
+  margin-top: 1.5rem;
+}
+
+.project-single-page .project-equipment-table {
+  width: 100%;
+  min-width: 420px;
+  border-collapse: collapse;
+  margin: 0;
+}
+
+.project-single-page .project-equipment-table th,
+.project-single-page .project-equipment-table td {
+  padding: 0.9rem 1.25rem;
+  text-align: left;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  border-bottom: 1px solid rgba(35, 73, 130, 0.1);
+}
+
+.project-single-page .project-equipment-table tr:last-child th,
+.project-single-page .project-equipment-table tr:last-child td {
+  border-bottom: 0;
+}
+
+.project-single-page .project-equipment-table th {
+  width: 38%;
+  background: var(--tertiary-color);
+  color: var(--about-muted);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.project-single-page .project-equipment-table td {
+  color: var(--about-text);
+  font-weight: 600;
+}
+
+/* Gallery */
+.project-single-page .project-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.75rem;
+}
+
+.project-single-page .project-gallery-item {
+  margin: 0;
+  border-radius: 1rem;
+  overflow: hidden;
+  background: #dfe8f8;
+}
+
+.project-single-page .project-gallery-item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+/* -------------------------------------------------------
+ * Shared CTA + jump links
+ * ----------------------------------------------------- */
+
+.projects-page .project-cta-panel {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-top: 4rem;
+  padding: 2.5rem;
+  border-radius: 1.1rem;
+  background: linear-gradient(120deg, var(--about-navy-deep), var(--primary));
+  color: #fff;
+}
+
+.projects-page .project-cta-copy {
+  flex: 1 1 360px;
+}
+
+.projects-page .project-cta-copy .section-pill {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+}
+
+.projects-page .project-cta-copy h2 {
+  margin: 0 0 0.6rem;
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  font-weight: 800;
+  color: #fff;
+}
+
+.projects-page .project-cta-copy p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.88);
+  max-width: 60ch;
+}
+
+.projects-page .project-cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.projects-page .project-cta-phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.6rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  background: transparent;
+  color: #fff;
+  font-weight: 700;
+}
+
+.projects-page .project-cta-phone:hover,
+.projects-page .project-cta-phone:focus-visible {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+}
+
+.projects-page .project-jump-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 2.5rem;
+}
+
+.projects-page .project-jump-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.25rem;
+  border-radius: 0.7rem;
+  background: #eceff5;
+  color: var(--about-text);
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+
+.projects-page .project-jump-link:hover,
+.projects-page .project-jump-link:focus-visible {
+  background: #6f95e1;
+  color: #fff;
+}
+
+.projects-page .project-jump-link i {
+  font-size: 0.75rem;
+}
+
+/* Visually hidden, but still read out. */
+.projects-page .screen-reader-text {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* -------------------------------------------------------
+ * Responsive
+ * ----------------------------------------------------- */
+
+@media (max-width: 991.98px) {
+  .projects-page .project-grid,
+  .project-single-page .project-gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .project-single-page .project-facts {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .project-single-page .project-overview-lead {
+    grid-template-columns: minmax(0, 1fr) minmax(260px, 0.8fr);
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .projects-page .project-grid,
+  .project-single-page .project-gallery-grid,
+  .project-single-page .project-facts {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .projects-page .project-section + .project-section {
+    margin-top: 3rem;
+  }
+
+  .projects-page .project-cta-panel {
+    padding: 1.9rem 1.5rem;
+    margin-top: 3rem;
+  }
+
+  .projects-page .project-cta-actions {
+    width: 100%;
+  }
+
+  .projects-page .project-cta-actions .btn {
+    flex: 1 1 auto;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .project-single-page .project-equipment,
+  .project-single-page .project-gallery,
+  .project-single-page .project-related {
+    margin-top: 3rem;
+  }
+
+  .project-single-page .project-featured-photo,
+  .project-single-page .project-featured-photo img,
+  .project-single-page .project-featured-photo .project-media-placeholder {
+    min-height: 0;
+  }
+
+  .project-single-page .project-featured-photo {
+    width: 100%;
+    margin: 0;
+  }
+
+  .project-single-page .project-overview-lead {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem;
+  }
+
+  .project-single-page .project-overview-details {
+    margin-top: 2rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .projects-page .project-card,
+  .projects-page .project-card-link i {
+    transition: none;
+  }
+
+  .projects-page .project-card:hover,
+  .projects-page .project-card:focus-within {
+    transform: none;
+  }
+}

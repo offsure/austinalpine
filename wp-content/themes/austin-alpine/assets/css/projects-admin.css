@@ -1,0 +1,134 @@
+/**
+ * Project Photos meta box.
+ *
+ * Uses core admin colours and dashicons throughout so the box reads as part of
+ * WordPress rather than a bolted-on widget.
+ */
+
+.alpine-gallery-intro {
+  margin: 0 0 1em;
+  color: #50575e;
+}
+
+.alpine-gallery-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.alpine-gallery-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px;
+  margin: 0 0 8px;
+  background: #fff;
+  border: 1px solid #dcdcde;
+  border-radius: 4px;
+}
+
+.alpine-gallery-item:hover {
+  border-color: #c3c4c7;
+}
+
+.alpine-gallery-handle {
+  cursor: grab;
+  color: #a7aaad;
+  flex: 0 0 auto;
+  line-height: 1;
+}
+
+.alpine-gallery-handle:active {
+  cursor: grabbing;
+}
+
+.alpine-gallery-thumb {
+  flex: 0 0 auto;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 3px;
+  background: #f0f0f1;
+}
+
+.alpine-gallery-fields {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.alpine-gallery-label {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: 600;
+  font-size: 12px;
+  color: #50575e;
+}
+
+.alpine-gallery-alt-warning {
+  font-weight: 400;
+  color: #b32d2e;
+}
+
+.alpine-gallery-remove {
+  flex: 0 0 auto;
+  color: #b32d2e;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.alpine-gallery-remove:hover,
+.alpine-gallery-remove:focus {
+  color: #8a2424;
+}
+
+.alpine-gallery-placeholder {
+  height: 102px;
+  margin: 0 0 8px;
+  border: 1px dashed #8c8f94;
+  border-radius: 4px;
+  background: #f6f7f7;
+}
+
+.alpine-gallery-empty {
+  padding: 16px;
+  margin: 0 0 1em;
+  background: #f6f7f7;
+  border: 1px dashed #c3c4c7;
+  border-radius: 4px;
+  color: #646970;
+  text-align: center;
+}
+
+.alpine-gallery-actions {
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 782px) {
+  .alpine-gallery-item {
+    flex-wrap: wrap;
+  }
+
+  .alpine-gallery-fields {
+    flex: 1 1 100%;
+    order: 3;
+  }
+}
+
+/**
+ * Project Story editors.
+ *
+ * The three story fields are TinyMCE now. ACF gives them a short default box;
+ * these are long-form fields, so they get room to write in.
+ */
+.acf-field-wysiwyg .acf-editor-wrap iframe {
+  min-height: 260px;
+}
+
+.acf-field[data-name="project_issue"] .acf-editor-wrap iframe,
+.acf-field[data-name="project_work"] .acf-editor-wrap iframe {
+  min-height: 200px;
+}
+
+.acf-field-wysiwyg .acf-editor-wrap .wp-editor-area {
+  min-height: 200px;
+}

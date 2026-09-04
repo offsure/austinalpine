@@ -1,0 +1,441 @@
+0000.001 (0) Opened log file at time: Wed, 26 Aug 2026 08:41:46 +0000 on http://localhost/austin-alpine-wp
+0000.005 (0) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.26.7 WP: 7.1 PHP: 8.0.30 (apache2handler, Windows NT DESKTOP-LA9HVBO 10.0 build 19045 (Windows 10) AMD64) MySQL: 10.4.32-MariaDB (max packet size=1048576) WPLANG: en_US Server: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30 safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 81.3M | 84M) multisite: N openssl: OpenSSL 1.1.1t  7 Feb 2023 mcrypt: N LANG:  WP Proxy: disabled ZipArchive::addFile: Y
+0000.008 (0) Free space on disk containing Updraft's temporary directory: 25025.9 MB
+0000.029 (0) Tasks: Backup files: 1 (schedule: daily) Backup DB: 1 (schedule: daily)
+0000.037 (0) Requesting semaphore lock (fd) (apparently not via scheduler)
+0000.047 (0) Set semaphore last lock (fd) time to 2026-08-26 08:41:47
+0000.050 (0) Semaphore lock (fd) complete
+0000.061 (0) Backup run: resumption=0, nonce=add99bce0056, file_nonce=add99bce0056 begun at=1787733706 (1s ago), job type=backup
+0000.066 (0) Scheduling a resumption (1) after 300 seconds (1787734007) in case this run gets aborted
+0000.088 (0) Checking if we have a zip executable available
+0000.096 (0) Creation of backups of directories: beginning
+0000.109 (0) Beginning creation of dump of plugins (split every: 25 MB)
+0003.200 (0) Total entities for the zip file: 648 directories, 4304 files (0 skipped as non-modified), 89 MB
+0003.214 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0 MB, 1 (1) files added so far); re-opening (prior size: 0 KB)
+0003.406 (0) Zip: backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-plugins.zip.tmp: 100 files added (on-disk size: 121.7 KB)
+0003.517 (0) Zip: backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-plugins.zip.tmp: 200 files added (on-disk size: 121.7 KB)
+0003.635 (0) Zip: backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-plugins.zip.tmp: 300 files added (on-disk size: 121.7 KB)
+0003.758 (0) Zip: backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-plugins.zip.tmp: 400 files added (on-disk size: 121.7 KB)
+0003.866 (0) Zip: backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-plugins.zip.tmp: 500 files added (on-disk size: 121.7 KB)
+0003.890 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): possibly approaching split limit (22.7 MB, 520 (521) files added so far); last ratio: 1; re-opening (prior size: 121.7 KB)
+0012.266 (0) Zip size is at/near split limit (8 MB / 25 MB) - bumping index (from: 0)
+0012.554 (0) Creating zip file manifest (backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-plugins.zip.list-temp.tmp)
+0012.565 (0) Successfully created zip file manifest (size: 42602)
+0012.574 (0) Created plugins zip (0) - 8184.4 KB in 12.1 s (674.7 KB/s) (checksums: sha1: af828e2f2e73f8348cf0b703af6b14cfe204bd94, sha256: 09b02b3571c946ab8f26b368cf6f87a435e5e035b3e5abf86900cf4305c5ff2f)
+0012.593 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0012.595 (0) No remote despatch: user chose no remote backup service
+0012.597 (0) Recording as successfully uploaded: backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-plugins.zip
+0012.602 (0) Deleting zip manifest (backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-plugins.zip.list.tmp)
+0012.605 (0) Prune old backups from local store: nothing to do, since the user disabled local deletion and we are using local backups
+0012.699 (0) Zip: backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-plugins2.zip.tmp: 600 files added (on-disk size: 0 KB)
+0012.792 (0) Zip: backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-plugins2.zip.tmp: 700 files added (on-disk size: 0 KB)
+0012.883 (0) Zip: backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-plugins2.zip.tmp: 800 files added (on-disk size: 0 KB)
+0012.977 (0) Zip: backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-plugins2.zip.tmp: 900 files added (on-disk size: 0 KB)
+0013.079 (0) Zip: backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-plugins2.zip.tmp: 1000 files added (on-disk size: 0 KB)
+0013.176 (0) Zip: backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-plugins2.zip.tmp: 1100 files added (on-disk size: 0 KB)
+0013.299 (0) Zip: backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-plugins2.zip.tmp: 1200 files added (on-disk size: 0 KB)
+0013.393 (0) Zip: backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-plugins2.zip.tmp: 1300 files added (on-disk size: 0 KB)
+0013.493 (0) Zip: backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-plugins2.zip.tmp: 1400 files added (on-disk size: 0 KB)
+0013.590 (0) Zip: backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-plugins2.zip.tmp: 1500 files added (on-disk size: 0 KB)
+0013.612 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 1000 files added on this batch (15.1 MB, 4304 files batched, 1001 (1522) added so far); re-opening (prior size: 0 KB)
+0017.244 (0) Zip: backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-plugins2.zip.tmp: 1600 files added (on-disk size: 5372 KB)
+0017.341 (0) Zip: backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-plugins2.zip.tmp: 1700 files added (on-disk size: 5372 KB)
+0017.448 (0) Zip: backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-plugins2.zip.tmp: 1800 files added (on-disk size: 5372 KB)
+0017.538 (0) Zip: backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-plugins2.zip.tmp: 1900 files added (on-disk size: 5372 KB)
+0017.633 (0) Zip: backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-plugins2.zip.tmp: 2000 files added (on-disk size: 5372 KB)
+0017.728 (0) Zip: backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-plugins2.zip.tmp: 2100 files added (on-disk size: 5372 KB)
+0017.815 (0) Zip: backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-plugins2.zip.tmp: 2200 files added (on-disk size: 5372 KB)
+0017.907 (0) Zip: backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-plugins2.zip.tmp: 2300 files added (on-disk size: 5372 KB)
+0018.000 (0) Zip: backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-plugins2.zip.tmp: 2400 files added (on-disk size: 5372 KB)
+0018.073 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 25 MB added on this batch (25.2 MB, 4304 files batched, 966 (2488) added so far); re-opening (prior size: 5372 KB)
+0028.064 (0) A useful amount of data was added after this amount of zip processing: 11.1 s (normalised: 10.9 s, rate: 2338.5 KB/s)
+0028.122 (0) Zip: backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-plugins2.zip.tmp: 2500 files added (on-disk size: 13749 KB)
+0028.216 (0) Zip: backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-plugins2.zip.tmp: 2600 files added (on-disk size: 13749 KB)
+0028.310 (0) Zip: backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-plugins2.zip.tmp: 2700 files added (on-disk size: 13749 KB)
+0028.394 (0) Zip: backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-plugins2.zip.tmp: 2800 files added (on-disk size: 13749 KB)
+0028.493 (0) Zip: backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-plugins2.zip.tmp: 2900 files added (on-disk size: 13749 KB)
+0028.589 (0) Zip: backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-plugins2.zip.tmp: 3000 files added (on-disk size: 13749 KB)
+0028.679 (0) Zip: backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-plugins2.zip.tmp: 3100 files added (on-disk size: 13749 KB)
+0028.767 (0) Zip: backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-plugins2.zip.tmp: 3200 files added (on-disk size: 13749 KB)
+0028.848 (0) Zip: backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-plugins2.zip.tmp: 3300 files added (on-disk size: 13749 KB)
+0028.931 (0) Zip: backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-plugins2.zip.tmp: 3400 files added (on-disk size: 13749 KB)
+0029.005 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 1000 files added on this batch (18.5 MB, 4304 files batched, 1001 (3489) added so far); re-opening (prior size: 13749 KB)
+0035.226 (0) Zip: backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-plugins2.zip.tmp: 3500 files added (on-disk size: 19292.4 KB)
+0035.307 (0) Zip: backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-plugins2.zip.tmp: 3600 files added (on-disk size: 19292.4 KB)
+0035.392 (0) Zip: backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-plugins2.zip.tmp: 3700 files added (on-disk size: 19292.4 KB)
+0035.472 (0) Zip: backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-plugins2.zip.tmp: 3800 files added (on-disk size: 19292.4 KB)
+0035.556 (0) Zip: backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-plugins2.zip.tmp: 3900 files added (on-disk size: 19292.4 KB)
+0035.642 (0) Zip: backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-plugins2.zip.tmp: 4000 files added (on-disk size: 19292.4 KB)
+0035.718 (0) Zip: backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-plugins2.zip.tmp: 4100 files added (on-disk size: 19292.4 KB)
+0035.797 (0) Zip: backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-plugins2.zip.tmp: 4200 files added (on-disk size: 19292.4 KB)
+0035.890 (0) Zip: backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-plugins2.zip.tmp: 4300 files added (on-disk size: 19292.4 KB)
+0042.693 (0) Creating zip file manifest (backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-plugins2.zip.list-temp.tmp)
+0042.724 (0) Successfully created zip file manifest (size: 326635)
+0043.220 (0) Created plugins zip (1) - 22575.7 KB in 30.6 s (736.8 KB/s) (sha1: 8ba88023d17e6e9ecb9525e8dfc801ceeba3118a, sha256: 82540b502ad4bf22f9648746447b15f697c6800f76da444fe741e6f268d60f85)
+0043.240 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0043.243 (0) No remote despatch: user chose no remote backup service
+0043.246 (0) Recording as successfully uploaded: backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-plugins2.zip
+0043.250 (0) Deleting zip manifest (backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-plugins2.zip.list.tmp)
+0043.254 (0) Prune old backups from local store: nothing to do, since the user disabled local deletion and we are using local backups
+0043.268 (0) Beginning creation of dump of themes (split every: 25 MB)
+0044.284 (0) Total entities for the zip file: 393 directories, 1241 files (0 skipped as non-modified), 37.1 MB
+0044.384 (0) Zip: backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-themes.zip.tmp: 100 files added (on-disk size: 0 KB)
+0044.478 (0) Zip: backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-themes.zip.tmp: 200 files added (on-disk size: 0 KB)
+0044.574 (0) Zip: backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-themes.zip.tmp: 300 files added (on-disk size: 0 KB)
+0044.695 (0) Zip: backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-themes.zip.tmp: 400 files added (on-disk size: 0 KB)
+0044.797 (0) Zip: backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-themes.zip.tmp: 500 files added (on-disk size: 0 KB)
+0044.899 (0) Zip: backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-themes.zip.tmp: 600 files added (on-disk size: 0 KB)
+0045.006 (0) Zip: backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-themes.zip.tmp: 700 files added (on-disk size: 0 KB)
+0045.103 (0) Zip: backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-themes.zip.tmp: 800 files added (on-disk size: 0 KB)
+0045.176 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 25 MB added on this batch (25 MB, 1241 files batched, 860 (860) added so far); re-opening (prior size: 0 KB)
+0052.901 (0) A useful amount of data was added after this amount of zip processing: 9.9 s (normalised: 9.9 s, rate: 2590.3 KB/s)
+0052.972 (0) Zip: backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-themes.zip.tmp: 900 files added (on-disk size: 9289.8 KB)
+0053.053 (0) Zip: backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-themes.zip.tmp: 1000 files added (on-disk size: 9289.8 KB)
+0053.138 (0) Zip: backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-themes.zip.tmp: 1100 files added (on-disk size: 9289.8 KB)
+0053.220 (0) Zip: backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-themes.zip.tmp: 1200 files added (on-disk size: 9289.8 KB)
+0054.504 (0) Creating zip file manifest (backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-themes.zip.list-temp.tmp)
+0054.522 (0) Successfully created zip file manifest (size: 96602)
+0055.058 (0) Created themes zip (0) - 20618 KB in 11.8 s (1753.1 KB/s) (sha1: db830406c28ee57c78428d3bf32eafb20fe36532, sha256: 867d0febdab36b60a4a98be6802b34469e566d400a2ca57abe3bfea842ccc9c4)
+0055.078 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0055.080 (0) No remote despatch: user chose no remote backup service
+0055.083 (0) Recording as successfully uploaded: backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-themes.zip
+0055.087 (0) Deleting zip manifest (backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-themes.zip.list.tmp)
+0055.090 (0) Prune old backups from local store: nothing to do, since the user disabled local deletion and we are using local backups
+0055.106 (0) Exclusion option setting (uploads): 
+0055.114 (0) Looking for candidates to backup in: C:\xampp\htdocs\austin-alpine-wp/wp-content/uploads
+0055.118 (0) finding files: 2026: adding to list (1)
+0055.120 (0) finding files: aioseo: adding to list (2)
+0055.123 (0) finding files: wp-file-manager-pro: adding to list (3)
+0055.128 (0) finding files: wpcf7_uploads: adding to list (4)
+0055.132 (0) Beginning creation of dump of uploads (split every: 25 MB)
+0055.374 (0) Total entities for the zip file: 13 directories, 221 files (0 skipped as non-modified), 129.3 MB
+0055.492 (0) Zip: backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-uploads.zip.tmp: 100 files added (on-disk size: 0 KB)
+0055.525 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 25 MB added on this batch (27.8 MB, 221 files batched, 125 (125) added so far); re-opening (prior size: 0 KB)
+0056.747 (0) A useful amount of data was added after this amount of zip processing: 1.7 s (normalised: 1.6 s, rate: 16413.2 KB/s)
+0056.749 (0) Performance is good - but we will not increase the amount of data we batch, as we are already at the present limit (time=1.7346789836884, normalised_time=1.5597218455944, max_time=56.748297929764, data points known=1, max_bytes=26214400)
+0056.754 (0) Zip size is at/near split limit (27.8 MB / 25 MB) - bumping index (from: 0)
+0057.506 (0) Creating zip file manifest (backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-uploads.zip.list-temp.tmp)
+0057.512 (0) Successfully created zip file manifest (size: 7048)
+0057.521 (0) Created uploads zip (0) - 28479.7 KB in 1.6 s (17922 KB/s) (checksums: sha1: 6bb56de870255aee13597a149b3b0d5d4c89d4f4, sha256: c7347ca19f468c2520ee616dba79aab3ab770d701cbf592c3808a84ac3bdfbfe)
+0057.546 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0057.548 (0) No remote despatch: user chose no remote backup service
+0057.551 (0) Recording as successfully uploaded: backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-uploads.zip
+0057.557 (0) Deleting zip manifest (backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-uploads.zip.list.tmp)
+0057.561 (0) Prune old backups from local store: nothing to do, since the user disabled local deletion and we are using local backups
+0057.597 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 25 MB added on this batch (48.8 MB, 221 files batched, 29 (154) added so far); re-opening (prior size: 0 KB)
+0058.365 (0) A useful amount of data was added after this amount of zip processing: 2.4 s (normalised: 1.2 s, rate: 21249.4 KB/s)
+0058.367 (0) Performance is good - but we will not increase the amount of data we batch, as we are already at the present limit (time=2.3529200553894, normalised_time=1.2047417991643, max_time=58.365944862366, data points known=1, max_bytes=26214400)
+0058.371 (0) Zip size is at/near split limit (48.8 MB / 25 MB) - bumping index (from: 1)
+0059.439 (0) Creating zip file manifest (backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-uploads2.zip.list-temp.tmp)
+0059.445 (0) Successfully created zip file manifest (size: 1667)
+0059.452 (0) Created uploads zip (1) - 50001.4 KB in 0.8 s (58865.3 KB/s) (checksums: sha1: 29437e2651228fc9bf0e2086ef9203aa1d2221b8, sha256: fad02bf8fc4b2e3e938fc1de06f3f7a23f5802ada65011a2e096bdc5f37b7bc8)
+0059.471 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0059.473 (0) No remote despatch: user chose no remote backup service
+0059.476 (0) Recording as successfully uploaded: backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-uploads2.zip
+0059.482 (0) Deleting zip manifest (backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-uploads2.zip.list.tmp)
+0059.485 (0) Prune old backups from local store: nothing to do, since the user disabled local deletion and we are using local backups
+0059.516 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 25 MB added on this batch (25.3 MB, 221 files batched, 25 (179) added so far); re-opening (prior size: 0 KB)
+0059.967 (0) A useful amount of data was added after this amount of zip processing: 2 s (normalised: 1.9 s, rate: 13265.8 KB/s)
+0059.969 (0) Performance is good - but we will not increase the amount of data we batch, as we are already at the present limit (time=1.9548990726471, normalised_time=1.9297778182881, max_time=59.968163967133, data points known=1, max_bytes=26214400)
+0059.975 (0) Zip size is at/near split limit (25.3 MB / 25 MB) - bumping index (from: 2)
+0060.656 (0) Creating zip file manifest (backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-uploads3.zip.list-temp.tmp)
+0060.662 (0) Successfully created zip file manifest (size: 1583)
+0060.670 (0) Created uploads zip (2) - 25933.3 KB in 0.5 s (49544.9 KB/s) (checksums: sha1: 87e4cb0af8a12526cc246b1043146dea0524eb8f, sha256: f028178f7298f3c77c9eef2a7975d80637d0f8a36e6c1082ce77ee34d22f1a16)
+0060.693 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0060.695 (0) No remote despatch: user chose no remote backup service
+0060.698 (0) Recording as successfully uploaded: backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-uploads3.zip
+0060.703 (0) Deleting zip manifest (backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-uploads3.zip.list.tmp)
+0060.706 (0) Prune old backups from local store: nothing to do, since the user disabled local deletion and we are using local backups
+0060.733 (0) Zip: backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-uploads4.zip.tmp: 200 files added (on-disk size: 0 KB)
+0060.746 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 25 MB added on this batch (25.2 MB, 221 files batched, 31 (210) added so far); re-opening (prior size: 0 KB)
+0061.112 (0) A useful amount of data was added after this amount of zip processing: 2.1 s (normalised: 2.1 s, rate: 12308.8 KB/s)
+0061.115 (0) Performance is good - but we will not increase the amount of data we batch, as we are already at the present limit (time=2.1000080108643, normalised_time=2.0798140340321, max_time=61.113556861877, data points known=1, max_bytes=26214400)
+0061.119 (0) Zip size is at/near split limit (25.2 MB / 25 MB) - bumping index (from: 3)
+0061.792 (0) Creating zip file manifest (backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-uploads4.zip.list-temp.tmp)
+0061.797 (0) Successfully created zip file manifest (size: 2154)
+0061.804 (0) Created uploads zip (3) - 25854.1 KB in 0.4 s (57612.5 KB/s) (checksums: sha1: 06915382f48ca00bc63673a0641b762427aebfca, sha256: 7e939bb6dfdddfda568c8315b08b24697e35c1022e098ab5a02d47dc944a3723)
+0061.820 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0061.822 (0) No remote despatch: user chose no remote backup service
+0061.824 (0) Recording as successfully uploaded: backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-uploads4.zip
+0061.829 (0) Deleting zip manifest (backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-uploads4.zip.list.tmp)
+0061.833 (0) Prune old backups from local store: nothing to do, since the user disabled local deletion and we are using local backups
+0062.816 (0) Creating zip file manifest (backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-uploads5.zip.list-temp.tmp)
+0062.820 (0) Successfully created zip file manifest (size: 624)
+0062.854 (0) Created uploads zip (4) - 751.8 KB in 1 s (719.9 KB/s) (sha1: bc817f5fba6c6326a055aefcea648f7a6518cc6d, sha256: fd1cc9fb5bbd7e8606e81e9d118c936ee9fd1423893110396e5ffed293944f85)
+0062.867 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0062.870 (0) No remote despatch: user chose no remote backup service
+0062.872 (0) Recording as successfully uploaded: backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-uploads5.zip
+0062.878 (0) Deleting zip manifest (backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-uploads5.zip.list.tmp)
+0062.881 (0) Prune old backups from local store: nothing to do, since the user disabled local deletion and we are using local backups
+0062.895 (0) Beginning creation of dump of mu-plugins (split every: 25 MB)
+0062.925 (0) Total entities for the zip file: 1 directories, 3 files (0 skipped as non-modified), 0 MB
+0062.948 (0) Creating zip file manifest (backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-mu-plugins.zip.list-temp.tmp)
+0062.952 (0) Successfully created zip file manifest (size: 182)
+0062.967 (0) Created mu-plugins zip (0) - 5.3 KB in 0 s (117.1 KB/s) (sha1: fe75adcec7721b5964d54ae0450f120e6d2985ee, sha256: a94fab3bcd486cd7a2844f64b078b8a54a3dbba90c7e09334b60d8860d32b034)
+0062.980 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0062.983 (0) No remote despatch: user chose no remote backup service
+0062.986 (0) Recording as successfully uploaded: backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-mu-plugins.zip
+0062.991 (0) Deleting zip manifest (backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-mu-plugins.zip.list.tmp)
+0062.993 (0) Prune old backups from local store: nothing to do, since the user disabled local deletion and we are using local backups
+0063.006 (0) Beginning backup of other directories found in the content directory (index: 0)
+0063.008 (0) Exclusion option setting (others): 
+0063.010 (0) Looking for candidates to backup in: C:\xampp\htdocs\austin-alpine-wp/wp-content
+0063.013 (0) finding files: index.php: adding to list (1)
+0063.016 (0) finding files: mu-plugins: skipping: this is the mu-plugins directory
+0063.018 (0) finding files: plugins: skipping: this is the plugins directory
+0063.021 (0) finding files: themes: skipping: this is the themes directory
+0063.023 (0) finding files: updraft: skipping: this is the updraft directory
+0063.026 (0) finding files: upgrade: adding to list (2)
+0063.028 (0) finding files: upgrade-temp-backup: adding to list (3)
+0063.031 (0) finding files: uploads: skipping: this is the uploads directory
+0063.068 (0) Total entities for the zip file: 3 directories, 1 files (0 skipped as non-modified), 0 MB
+0063.100 (0) Creating zip file manifest (backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-others.zip.list-temp.tmp)
+0063.105 (0) Successfully created zip file manifest (size: 43)
+0063.121 (0) Created others zip (0) - 0.5 KB in 0.1 s (8.3 KB/s) (sha1: f9df0589710cd1cc7ba1257912ee6e582920a668, sha256: 15ce2d9acff4e0dfb07a27d502fe7a079d07690c5e1328daa1c9e637b4e2217a)
+0063.135 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0063.137 (0) No remote despatch: user chose no remote backup service
+0063.140 (0) Recording as successfully uploaded: backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-others.zip
+0063.146 (0) Deleting zip manifest (backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-others.zip.list.tmp)
+0063.149 (0) Prune old backups from local store: nothing to do, since the user disabled local deletion and we are using local backups
+0063.167 (0) Saving backup status to database (elements: 15)
+0063.181 (0) Beginning creation of database dump (WordPress DB)
+0063.185 (0) SQL compatibility mode is: NO_ZERO_IN_DATE,NO_ENGINE_SUBSTITUTION
+0063.293 (0) Table wp_options: Total expected rows (via COUNT): 367
+0063.295 (0) Table is relatively small; fetch_rows will thus be: 500 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0063.421 (0) Table wp_options: Rows added in this batch (next record: 64578): 361 (uncompressed bytes in this segment=1566226) in 0.19 seconds
+0063.441 (0) Table wp_options: finishing file(s) (2, 300 KB)
+0063.460 (0) Table wp_users: Total expected rows (via COUNT): 1
+0063.463 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0063.469 (0) Table wp_users: Rows added in this batch (next record: 1): 1 (uncompressed bytes in this segment=1224) in 0.02 seconds
+0063.485 (0) Table wp_users: finishing file(s) (2, 0.6 KB)
+0063.519 (0) Table wp_usermeta: Total expected rows (via COUNT): 36
+0063.522 (0) Table is relatively small; fetch_rows will thus be: 50 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0063.530 (0) Table wp_usermeta: Rows added in this batch (next record: 38): 36 (uncompressed bytes in this segment=7857) in 0.03 seconds
+0063.551 (0) Table wp_usermeta: finishing file(s) (2, 2.9 KB)
+0063.579 (0) Table wp_actionscheduler_actions: Total expected rows (via COUNT): 42
+0063.582 (0) Table is relatively small; fetch_rows will thus be: 50 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0063.587 (0) Table wp_actionscheduler_actions: Rows added in this batch (next record: 7251): 42 (uncompressed bytes in this segment=22320) in 0.02 seconds
+0063.607 (0) Table wp_actionscheduler_actions: finishing file(s) (2, 2.3 KB)
+0063.624 (0) Table wp_actionscheduler_claims: Total expected rows (via COUNT): 0
+0063.631 (0) Table wp_actionscheduler_claims: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=627) in 0.01 seconds
+0063.645 (0) Table wp_actionscheduler_claims: finishing file(s) (2, 0.4 KB)
+0063.663 (0) Table wp_actionscheduler_groups: Total expected rows (via COUNT): 4
+0063.666 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0063.674 (0) Table wp_actionscheduler_groups: Rows added in this batch (next record: 4): 4 (uncompressed bytes in this segment=721) in 0.02 seconds
+0063.691 (0) Table wp_actionscheduler_groups: finishing file(s) (2, 0.4 KB)
+0063.709 (0) Table wp_actionscheduler_logs: Total expected rows (via COUNT): 100
+0063.711 (0) Table is relatively small; fetch_rows will thus be: 200 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0063.720 (0) Table wp_actionscheduler_logs: Rows added in this batch (next record: 20729): 100 (uncompressed bytes in this segment=9583) in 0.02 seconds
+0063.736 (0) Table wp_actionscheduler_logs: finishing file(s) (2, 1.4 KB)
+0063.758 (0) Table wp_commentmeta: Total expected rows (via COUNT): 62
+0063.761 (0) Table is relatively small; fetch_rows will thus be: 100 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0063.769 (0) Table wp_commentmeta: Rows added in this batch (next record: 164): 62 (uncompressed bytes in this segment=3511) in 0.02 seconds
+0063.786 (0) Table wp_commentmeta: finishing file(s) (2, 0.8 KB)
+0063.804 (0) Table wp_comments: Total expected rows (via COUNT): 31
+0063.807 (0) Table is relatively small; fetch_rows will thus be: 50 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0063.815 (0) Table wp_comments: Rows added in this batch (next record: 42): 31 (uncompressed bytes in this segment=12305) in 0.02 seconds
+0063.833 (0) Table wp_comments: finishing file(s) (2, 2.1 KB)
+0063.854 (0) Table wp_links: Total expected rows (via COUNT): 0
+0063.860 (0) Table wp_links: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=1027) in 0.02 seconds
+0063.878 (0) Table wp_links: finishing file(s) (2, 0.5 KB)
+0063.905 (0) Table wp_postmeta: Total expected rows (approximate): 1506
+0063.936 (0) Table wp_postmeta: Rows added in this batch (next record: 1878): 1506 (uncompressed bytes in this segment=194351) in 0.05 seconds
+0063.955 (0) Table wp_postmeta: finishing file(s) (2, 32.1 KB)
+0063.989 (0) Table wp_posts: Total expected rows (via COUNT): 294
+0063.991 (0) Table is relatively small; fetch_rows will thus be: 500 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0064.021 (0) Table wp_posts: Rows added in this batch (next record: 377): 294 (uncompressed bytes in this segment=264565) in 0.06 seconds
+0064.041 (0) Table wp_posts: finishing file(s) (2, 29.7 KB)
+0064.069 (0) Table wp_term_relationships: Total expected rows (approximate): 65
+0064.077 (0) Table wp_term_relationships: Rows added in this batch (next record: 100000): 65 (uncompressed bytes in this segment=1588) in 0.03 seconds
+0064.094 (0) Table wp_term_relationships: finishing file(s) (2, 0.6 KB)
+0064.115 (0) Table wp_term_taxonomy: Total expected rows (via COUNT): 8
+0064.118 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0064.125 (0) Table wp_term_taxonomy: Rows added in this batch (next record: 8): 8 (uncompressed bytes in this segment=1814) in 0.02 seconds
+0064.144 (0) Table wp_term_taxonomy: finishing file(s) (2, 0.9 KB)
+0064.169 (0) Table wp_termmeta: Total expected rows (via COUNT): 0
+0064.174 (0) Table wp_termmeta: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=607) in 0.02 seconds
+0064.191 (0) Table wp_termmeta: finishing file(s) (2, 0.4 KB)
+0064.212 (0) Table wp_terms: Total expected rows (via COUNT): 8
+0064.214 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0064.221 (0) Table wp_terms: Rows added in this batch (next record: 8): 8 (uncompressed bytes in this segment=997) in 0.02 seconds
+0064.235 (0) Table wp_terms: finishing file(s) (2, 0.6 KB)
+0064.258 (0) Table wp_aioseo_ai_insights_keyword_reports: Total expected rows (via COUNT): 0
+0064.263 (0) Table wp_aioseo_ai_insights_keyword_reports: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=1042) in 0.02 seconds
+0064.281 (0) Table wp_aioseo_ai_insights_keyword_reports: finishing file(s) (2, 0.5 KB)
+0064.312 (0) Table wp_aioseo_cache: Total expected rows (via COUNT): 11
+0064.315 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0064.334 (0) Table wp_aioseo_cache: Rows added in this batch (next record: 31): 11 (uncompressed bytes in this segment=168357) in 0.04 seconds
+0064.353 (0) Table wp_aioseo_cache: finishing file(s) (2, 31.4 KB)
+0064.372 (0) Table wp_aioseo_crawl_cleanup_blocked_args: Total expected rows (via COUNT): 0
+0064.378 (0) Table wp_aioseo_crawl_cleanup_blocked_args: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=955) in 0.01 seconds
+0064.392 (0) Table wp_aioseo_crawl_cleanup_blocked_args: finishing file(s) (2, 0.4 KB)
+0064.411 (0) Table wp_aioseo_crawl_cleanup_logs: Total expected rows (via COUNT): 0
+0064.415 (0) Table wp_aioseo_crawl_cleanup_logs: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=772) in 0.01 seconds
+0064.431 (0) Table wp_aioseo_crawl_cleanup_logs: finishing file(s) (2, 0.4 KB)
+0064.457 (0) Table wp_aioseo_notifications: Total expected rows (via COUNT): 16
+0064.459 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0064.472 (0) Table wp_aioseo_notifications: Rows added in this batch (next record: 17): 16 (uncompressed bytes in this segment=74460) in 0.03 seconds
+0064.492 (0) Table wp_aioseo_notifications: finishing file(s) (2, 46.9 KB)
+0064.521 (0) Table wp_aioseo_posts: Total expected rows (via COUNT): 138
+0064.523 (0) Table is relatively small; fetch_rows will thus be: 250 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0064.546 (0) Table wp_aioseo_posts: Rows added in this batch (next record: 143): 138 (uncompressed bytes in this segment=139802) in 0.05 seconds
+0064.575 (0) Table wp_aioseo_posts: finishing file(s) (2, 5.4 KB)
+0064.594 (0) Table wp_aioseo_seo_analyzer_results: Total expected rows (via COUNT): 0
+0064.601 (0) Table wp_aioseo_seo_analyzer_results: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=760) in 0.02 seconds
+0064.618 (0) Table wp_aioseo_seo_analyzer_results: finishing file(s) (2, 0.4 KB)
+0064.637 (0) Table wp_aioseo_writing_assistant_keywords: Total expected rows (via COUNT): 0
+0064.641 (0) Table wp_aioseo_writing_assistant_keywords: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=1024) in 0.01 seconds
+0064.659 (0) Table wp_aioseo_writing_assistant_keywords: finishing file(s) (2, 0.5 KB)
+0064.678 (0) Table wp_aioseo_writing_assistant_posts: Total expected rows (via COUNT): 0
+0064.682 (0) Table wp_aioseo_writing_assistant_posts: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=924) in 0.01 seconds
+0064.697 (0) Table wp_aioseo_writing_assistant_posts: finishing file(s) (2, 0.4 KB)
+0064.722 (0) Table wp_cf7_views_entries: Total expected rows (via COUNT): 42
+0064.725 (0) Table is relatively small; fetch_rows will thus be: 50 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0064.751 (0) Table wp_cf7_views_entries: Rows added in this batch (next record: 42): 42 (uncompressed bytes in this segment=189301) in 0.04 seconds
+0064.770 (0) Table wp_cf7_views_entries: finishing file(s) (2, 118.7 KB)
+0064.789 (0) Table wp_wpfm_backup: Total expected rows (via COUNT): 0
+0064.795 (0) Table wp_wpfm_backup: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=478) in 0.02 seconds
+0064.810 (0) Table wp_wpfm_backup: finishing file(s) (2, 0.3 KB)
+0064.835 (0) Table wp_wpforms_logs: Total expected rows (via COUNT): 0
+0064.838 (0) Table wp_wpforms_logs: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=659) in 0.02 seconds
+0064.857 (0) Table wp_wpforms_logs: finishing file(s) (2, 0.4 KB)
+0064.883 (0) Table wp_wpforms_payment_meta: Total expected rows (via COUNT): 0
+0064.889 (0) Table wp_wpforms_payment_meta: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=690) in 0.02 seconds
+0064.907 (0) Table wp_wpforms_payment_meta: finishing file(s) (2, 0.4 KB)
+0064.926 (0) Table wp_wpforms_payments: Total expected rows (via COUNT): 0
+0064.933 (0) Table wp_wpforms_payments: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=1650) in 0.02 seconds
+0064.948 (0) Table wp_wpforms_payments: finishing file(s) (2, 0.6 KB)
+0064.973 (0) Table wp_wpforms_tasks_meta: Total expected rows (via COUNT): 2
+0064.976 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0064.983 (0) Table wp_wpforms_tasks_meta: Rows added in this batch (next record: 2): 2 (uncompressed bytes in this segment=745) in 0.02 seconds
+0065.002 (0) Table wp_wpforms_tasks_meta: finishing file(s) (2, 0.4 KB)
+0065.021 (0) Table wp_wpmailsmtp_debug_events: Total expected rows (via COUNT): 8
+0065.023 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0065.026 (0) Table wp_wpmailsmtp_debug_events: Rows added in this batch (next record: 8): 8 (uncompressed bytes in this segment=3739) in 0.01 seconds
+0065.041 (0) Table wp_wpmailsmtp_debug_events: finishing file(s) (2, 0.7 KB)
+0065.075 (0) Table wp_wpmailsmtp_tasks_meta: Total expected rows (via COUNT): 0
+0065.081 (0) Table wp_wpmailsmtp_tasks_meta: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=561) in 0.03 seconds
+0065.100 (0) Table wp_wpmailsmtp_tasks_meta: finishing file(s) (2, 0.3 KB)
+0065.117 (0) Table wp_yoast_expiring_store: Total expected rows (approximate): 0
+0065.123 (0) Table wp_yoast_expiring_store: Rows added in this batch (next record: 0): 0 (uncompressed bytes in this segment=533) in 0.01 seconds
+0065.139 (0) Table wp_yoast_expiring_store: finishing file(s) (2, 0.3 KB)
+0065.169 (0) Table wp_yoast_indexable: Total expected rows (via COUNT): 13
+0065.172 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0065.180 (0) Table wp_yoast_indexable: Rows added in this batch (next record: 13): 13 (uncompressed bytes in this segment=9128) in 0.03 seconds
+0065.199 (0) Table wp_yoast_indexable: finishing file(s) (2, 1.9 KB)
+0065.218 (0) Table wp_yoast_indexable_hierarchy: Total expected rows (approximate): 11
+0065.226 (0) Table wp_yoast_indexable_hierarchy: Rows added in this batch (next record: 1000): 11 (uncompressed bytes in this segment=968) in 0.02 seconds
+0065.242 (0) Table wp_yoast_indexable_hierarchy: finishing file(s) (2, 0.4 KB)
+0065.258 (0) Table wp_yoast_migrations: Total expected rows (via COUNT): 26
+0065.260 (0) Table is relatively small; fetch_rows will thus be: 50 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0065.266 (0) Table wp_yoast_migrations: Rows added in this batch (next record: 26): 26 (uncompressed bytes in this segment=1243) in 0.02 seconds
+0065.282 (0) Table wp_yoast_migrations: finishing file(s) (2, 0.6 KB)
+0065.298 (0) Table wp_yoast_primary_term: Total expected rows (via COUNT): 0
+0065.304 (0) Table wp_yoast_primary_term: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=829) in 0.02 seconds
+0065.321 (0) Table wp_yoast_primary_term: finishing file(s) (2, 0.4 KB)
+0065.340 (0) Table wp_yoast_seo_links: Total expected rows (via COUNT): 0
+0065.343 (0) Table wp_yoast_seo_links: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=1091) in 0.01 seconds
+0065.359 (0) Table wp_yoast_seo_links: finishing file(s) (2, 0.4 KB)
+0065.365 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db-table-wp_options.table.tmpr64579.gz (1/39/fopen): adding to final database dump
+0065.385 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db-table-wp_options.table.gz (2/39/fopen): adding to final database dump
+0065.388 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db-table-wp_users.table.tmpr2.gz (3/39/fopen): adding to final database dump
+0065.390 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db-table-wp_users.table.gz (4/39/fopen): adding to final database dump
+0065.393 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db-table-wp_usermeta.table.tmpr39.gz (5/39/fopen): adding to final database dump
+0065.397 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db-table-wp_usermeta.table.gz (6/39/fopen): adding to final database dump
+0065.399 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db-table-wp_actionscheduler_actions.table.tmpr7252.gz (7/39/fopen): adding to final database dump
+0065.402 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db-table-wp_actionscheduler_actions.table.gz (8/39/fopen): adding to final database dump
+0065.404 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db-table-wp_actionscheduler_claims.table.tmpr0.gz (9/39/fopen): adding to final database dump
+0065.407 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db-table-wp_actionscheduler_claims.table.gz (10/39/fopen): adding to final database dump
+0065.409 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db-table-wp_actionscheduler_groups.table.tmpr5.gz (11/39/fopen): adding to final database dump
+0065.412 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db-table-wp_actionscheduler_groups.table.gz (12/39/fopen): adding to final database dump
+0065.415 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db-table-wp_actionscheduler_logs.table.tmpr20730.gz (13/39/fopen): adding to final database dump
+0065.417 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db-table-wp_actionscheduler_logs.table.gz (14/39/fopen): adding to final database dump
+0065.420 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db-table-wp_commentmeta.table.tmpr165.gz (15/39/fopen): adding to final database dump
+0065.423 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db-table-wp_commentmeta.table.gz (16/39/fopen): adding to final database dump
+0065.425 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db-table-wp_comments.table.tmpr43.gz (17/39/fopen): adding to final database dump
+0065.428 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db-table-wp_comments.table.gz (18/39/fopen): adding to final database dump
+0065.431 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db-table-wp_links.table.tmpr0.gz (19/39/fopen): adding to final database dump
+0065.435 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db-table-wp_links.table.gz (20/39/fopen): adding to final database dump
+0065.438 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db-table-wp_postmeta.table.tmpr1879.gz (21/39/fopen): adding to final database dump
+0065.443 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db-table-wp_postmeta.table.gz (22/39/fopen): adding to final database dump
+0065.446 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db-table-wp_posts.table.tmpr378.gz (23/39/fopen): adding to final database dump
+0065.451 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db-table-wp_posts.table.gz (24/39/fopen): adding to final database dump
+0065.454 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db-table-wp_term_relationships.table.tmpr100001.gz (25/39/fopen): adding to final database dump
+0065.457 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db-table-wp_term_relationships.table.gz (26/39/fopen): adding to final database dump
+0065.459 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db-table-wp_term_taxonomy.table.tmpr9.gz (27/39/fopen): adding to final database dump
+0065.462 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db-table-wp_term_taxonomy.table.gz (28/39/fopen): adding to final database dump
+0065.464 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db-table-wp_termmeta.table.tmpr0.gz (29/39/fopen): adding to final database dump
+0065.467 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db-table-wp_termmeta.table.gz (30/39/fopen): adding to final database dump
+0065.469 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db-table-wp_terms.table.tmpr9.gz (31/39/fopen): adding to final database dump
+0065.472 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db-table-wp_terms.table.gz (32/39/fopen): adding to final database dump
+0065.474 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db-table-wp_aioseo_ai_insights_keyword_reports.table.tmpr0.gz (33/39/fopen): adding to final database dump
+0065.477 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db-table-wp_aioseo_ai_insights_keyword_reports.table.gz (34/39/fopen): adding to final database dump
+0065.480 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db-table-wp_aioseo_cache.table.tmpr32.gz (35/39/fopen): adding to final database dump
+0065.484 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db-table-wp_aioseo_cache.table.gz (36/39/fopen): adding to final database dump
+0065.486 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db-table-wp_aioseo_crawl_cleanup_blocked_args.table.tmpr0.gz (37/39/fopen): adding to final database dump
+0065.489 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db-table-wp_aioseo_crawl_cleanup_blocked_args.table.gz (38/39/fopen): adding to final database dump
+0065.491 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db-table-wp_aioseo_crawl_cleanup_logs.table.tmpr0.gz (39/39/fopen): adding to final database dump
+0065.494 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db-table-wp_aioseo_crawl_cleanup_logs.table.gz (40/39/fopen): adding to final database dump
+0065.497 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db-table-wp_aioseo_notifications.table.tmpr18.gz (41/39/fopen): adding to final database dump
+0065.502 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db-table-wp_aioseo_notifications.table.gz (42/39/fopen): adding to final database dump
+0065.505 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db-table-wp_aioseo_posts.table.tmpr144.gz (43/39/fopen): adding to final database dump
+0065.507 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db-table-wp_aioseo_posts.table.gz (44/39/fopen): adding to final database dump
+0065.510 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db-table-wp_aioseo_seo_analyzer_results.table.tmpr0.gz (45/39/fopen): adding to final database dump
+0065.513 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db-table-wp_aioseo_seo_analyzer_results.table.gz (46/39/fopen): adding to final database dump
+0065.516 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db-table-wp_aioseo_writing_assistant_keywords.table.tmpr0.gz (47/39/fopen): adding to final database dump
+0065.519 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db-table-wp_aioseo_writing_assistant_keywords.table.gz (48/39/fopen): adding to final database dump
+0065.521 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db-table-wp_aioseo_writing_assistant_posts.table.tmpr0.gz (49/39/fopen): adding to final database dump
+0065.524 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db-table-wp_aioseo_writing_assistant_posts.table.gz (50/39/fopen): adding to final database dump
+0065.526 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db-table-wp_cf7_views_entries.table.tmpr43.gz (51/39/fopen): adding to final database dump
+0065.536 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db-table-wp_cf7_views_entries.table.gz (52/39/fopen): adding to final database dump
+0065.539 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db-table-wp_wpfm_backup.table.tmpr0.gz (53/39/fopen): adding to final database dump
+0065.541 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db-table-wp_wpfm_backup.table.gz (54/39/fopen): adding to final database dump
+0065.544 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db-table-wp_wpforms_logs.table.tmpr0.gz (55/39/fopen): adding to final database dump
+0065.547 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db-table-wp_wpforms_logs.table.gz (56/39/fopen): adding to final database dump
+0065.550 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db-table-wp_wpforms_payment_meta.table.tmpr0.gz (57/39/fopen): adding to final database dump
+0065.552 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db-table-wp_wpforms_payment_meta.table.gz (58/39/fopen): adding to final database dump
+0065.554 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db-table-wp_wpforms_payments.table.tmpr0.gz (59/39/fopen): adding to final database dump
+0065.557 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db-table-wp_wpforms_payments.table.gz (60/39/fopen): adding to final database dump
+0065.560 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db-table-wp_wpforms_tasks_meta.table.tmpr3.gz (61/39/fopen): adding to final database dump
+0065.565 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db-table-wp_wpforms_tasks_meta.table.gz (62/39/fopen): adding to final database dump
+0065.567 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db-table-wp_wpmailsmtp_debug_events.table.tmpr9.gz (63/39/fopen): adding to final database dump
+0065.571 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db-table-wp_wpmailsmtp_debug_events.table.gz (64/39/fopen): adding to final database dump
+0065.581 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db-table-wp_wpmailsmtp_tasks_meta.table.tmpr0.gz (65/39/fopen): adding to final database dump
+0065.587 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db-table-wp_wpmailsmtp_tasks_meta.table.gz (66/39/fopen): adding to final database dump
+0065.591 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db-table-wp_yoast_expiring_store.table.tmpr1.gz (67/39/fopen): adding to final database dump
+0065.594 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db-table-wp_yoast_expiring_store.table.gz (68/39/fopen): adding to final database dump
+0065.597 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db-table-wp_yoast_indexable.table.tmpr14.gz (69/39/fopen): adding to final database dump
+0065.600 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db-table-wp_yoast_indexable.table.gz (70/39/fopen): adding to final database dump
+0065.603 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db-table-wp_yoast_indexable_hierarchy.table.tmpr1001.gz (71/39/fopen): adding to final database dump
+0065.606 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db-table-wp_yoast_indexable_hierarchy.table.gz (72/39/fopen): adding to final database dump
+0065.609 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db-table-wp_yoast_migrations.table.tmpr27.gz (73/39/fopen): adding to final database dump
+0065.613 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db-table-wp_yoast_migrations.table.gz (74/39/fopen): adding to final database dump
+0065.615 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db-table-wp_yoast_primary_term.table.tmpr0.gz (75/39/fopen): adding to final database dump
+0065.618 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db-table-wp_yoast_primary_term.table.gz (76/39/fopen): adding to final database dump
+0065.621 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db-table-wp_yoast_seo_links.table.tmpr0.gz (77/39/fopen): adding to final database dump
+0065.624 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db-table-wp_yoast_seo_links.table.gz (78/39/fopen): adding to final database dump
+0065.665 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db.gz: finished writing out complete database file (587.6 KB)
+0065.719 (0) Total database tables backed up: 39 (backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db.gz, size: 601855, sha1: 24a3e30fa45127e3e8672eb7c5506b1c46ec3a0d, sha256: 44194ade958eafb44ed75903ae1474f2ca08d43588cbdffa7a7211ec4f42636d)
+0065.752 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-plugins.zip: plugins: This file has already been successfully processed
+0065.755 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-plugins2.zip: plugins: This file has already been successfully processed
+0065.757 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-themes.zip: themes: This file has already been successfully processed
+0065.760 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-uploads.zip: uploads: This file has already been successfully processed
+0065.762 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-uploads2.zip: uploads: This file has already been successfully processed
+0065.765 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-uploads3.zip: uploads: This file has already been successfully processed
+0065.768 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-uploads4.zip: uploads: This file has already been successfully processed
+0065.770 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-uploads5.zip: uploads: This file has already been successfully processed
+0065.773 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-mu-plugins.zip: mu-plugins: This file has already been successfully processed
+0065.775 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-others.zip: others: This file has already been successfully processed
+0065.778 (0) backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db.gz: db: This file has not yet been successfully uploaded: will queue
+0065.781 (0) Saving backup history. Total backup size: 178.7 MB
+0065.795 (0) Requesting upload of the files that have not yet been successfully uploaded (1)
+0065.803 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0065.806 (0) No remote despatch: user chose no remote backup service
+0065.808 (0) Recording as successfully uploaded: backup_2026-08-26-0841_Alpine_Heating_amp_Air_Conditi_add99bce0056-db.gz
+0065.813 (0) Prune old backups from local store: nothing to do, since the user disabled local deletion and we are using local backups
+0065.815 (0) Resume backup (add99bce0056, 0): finish run
+0065.821 (0) Decremented the semaphore (fd) by 1
+0065.824 (0) Semaphore (fd) unlocked
+0065.830 (0) There were no errors in the uploads, so the 'resume' event (1) is being unscheduled
+0065.838 (0) No email will/can be sent - the user has not configured an email address.
+0065.840 (0) The backup succeeded and is now complete
