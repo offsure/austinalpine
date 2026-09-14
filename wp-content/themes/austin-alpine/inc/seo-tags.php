@@ -60,6 +60,11 @@ function alpine_seo_manual_entries() {
             'description' => 'Contact Alpine Heating & Air Conditioning for HVAC repair, AC service, heating help, maintenance, and estimates in Austin, TX.',
             'keywords' => array('contact hvac company austin', 'austin hvac service', 'schedule ac repair austin', 'alpine heating and air conditioning'),
         ),
+        'privacy-policy' => array(
+            'title' => 'Privacy Policy | Alpine Heating & Air Conditioning',
+            'description' => 'How Alpine Heating and Air Conditioning, LLC collects, uses, and protects personal information, including SMS text-message consent and opt-out details.',
+            'keywords' => array('alpine heating and air conditioning privacy policy', 'alpine hvac sms policy'),
+        ),
         'request-an-estimate' => array(
             'title' => 'Request an HVAC Estimate Austin, TX | Alpine Heating',
             'description' => 'Request an HVAC estimate in Austin, TX for AC repair, replacement, installation, heating, or maintenance. Compare options before your next comfort investment.',

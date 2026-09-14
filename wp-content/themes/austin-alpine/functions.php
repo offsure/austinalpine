@@ -460,6 +460,8 @@ require_once get_stylesheet_directory() . '/inc/seo-tags.php';
 require_once get_stylesheet_directory() . '/inc/projects-render.php';
 require_once get_stylesheet_directory() . '/inc/projects-seo.php';
 require_once get_stylesheet_directory() . '/inc/projects-gallery.php';
+require_once get_stylesheet_directory() . '/inc/sms-consent.php';
+require_once get_stylesheet_directory() . '/inc/privacy-policy.php';
 
 /**
  * Resolve a page ID from one or more possible slugs.
@@ -594,6 +596,7 @@ function alpine_get_page_link_data($preferred_slug, $fallback_slugs = array(), $
 function alpine_get_site_page_url($key) {
     $routes = array(
         'about' => array('slug' => 'about', 'fallback_slugs' => array(), 'fallback_path' => '/about/'),
+        'privacy' => array('slug' => 'privacy-policy', 'fallback_slugs' => array(), 'fallback_path' => '/privacy-policy/'),
         'contact' => array('slug' => 'contact-us', 'fallback_slugs' => array(), 'fallback_path' => '/contact-us/'),
         'services' => array('slug' => 'air-conditioning-services', 'fallback_slugs' => array('our-services'), 'fallback_path' => '/air-conditioning-services/'),
         'specials' => array('slug' => 'special-rebates', 'fallback_slugs' => array('special-rebate', 'special-rebate-austin-tx'), 'fallback_path' => '/special-rebates/'),
@@ -1846,6 +1849,9 @@ function alpine_get_employment_cf7_form_template() {
       </div>
     </div>
     <div class="row g-4 employment-captcha-row">
+      <div class="col-12">
+        [sms_consent]
+      </div>
       <div class="col-lg-4 col-md-6">
         <label class="form-label">CAPTCHA</label>
         [recaptcha_v2]

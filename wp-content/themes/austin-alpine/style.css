@@ -8131,3 +8131,92 @@ body.service-page {
 .about-page .breadcrumb-nav {
   display: none;
 }
+
+/* SMS consent disclaimer inside CF7 forms (inc/sms-consent.php) */
+.wpcf7-form .alpine-sms-consent {
+  margin: 0 0 0.85rem;
+  color: #5f6f8d;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.wpcf7-form .alpine-sms-consent a {
+  background-color: transparent; /* .hero-slide a paints links as buttons */
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.wpcf7-form .alpine-sms-consent a:hover,
+.wpcf7-form .alpine-sms-consent a:focus {
+  color: #1f4281;
+}
+
+/* Legal pages rendered through page.php (inc/privacy-policy.php) */
+
+/* page.php's <header> otherwise inherits the sticky navy site-nav bar rule. */
+.default-page-template .default-page-header {
+  position: static;
+  z-index: auto;
+  background: none;
+  backdrop-filter: none;
+  box-shadow: none;
+}
+
+.alpine-legal-content {
+  max-width: 860px;
+  color: #3f4f6b;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.alpine-legal-content h2 {
+  margin: 2.25rem 0 0.75rem;
+  color: #12315f;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.alpine-legal-content h3 {
+  margin: 1.5rem 0 0.5rem;
+  color: #12315f;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.alpine-legal-content p {
+  margin: 0 0 1rem;
+}
+
+.alpine-legal-content ul {
+  margin: 0 0 1.25rem;
+  padding-left: 1.35rem;
+}
+
+.alpine-legal-content li + li {
+  margin-top: 0.35rem;
+}
+
+.alpine-legal-content a {
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.alpine-legal-content a:hover,
+.alpine-legal-content a:focus {
+  color: #1f4281;
+}
+
+@media (max-width: 767.98px) {
+  .default-page-template .alpine-legal-content h2 {
+    margin-top: 1.85rem;
+    font-size: 1.3rem;
+  }
+
+  .default-page-template .alpine-legal-content h3 {
+    font-size: 1.05rem;
+  }
+}

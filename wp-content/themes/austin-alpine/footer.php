@@ -59,6 +59,7 @@ if ( has_custom_logo() ) {
             <li><a href="<?php echo esc_url(alpine_get_site_page_url('about')); ?>">About</a></li>
             <li><a href="<?php echo esc_url(alpine_get_site_page_url('services')); ?>">Services</a></li>
             <li><a href="<?php echo esc_url(alpine_get_site_page_url('specials')); ?>">Specials</a></li>
+            <li><a href="<?php echo esc_url(alpine_get_site_page_url('privacy')); ?>">Privacy Policy</a></li>
           </ul>
         </div>
         <div class="col-6 col-lg-2">
