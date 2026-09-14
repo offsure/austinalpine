@@ -1,0 +1,247 @@
+0000.001 (0) Opened log file at time: Mon, 14 Sep 2026 18:20:27 +0000 on http://localhost/austin-alpine-wp
+0000.005 (0) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.26.7 WP: 7.1 PHP: 8.0.30 (apache2handler, Windows NT DESKTOP-LA9HVBO 10.0 build 19045 (Windows 10) AMD64) MySQL: 10.4.32-MariaDB (max packet size=1048576) WPLANG: en_US Server: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30 safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 79.2M | 80M) multisite: N openssl: OpenSSL 1.1.1t  7 Feb 2023 mcrypt: N LANG:  WP Proxy: disabled ZipArchive::addFile: Y
+0000.007 (0) Free space on disk containing Updraft's temporary directory: 29633.6 MB
+0000.017 (0) Tasks: Backup files: 1 (schedule: daily) Backup DB:  (schedule: daily)
+0000.020 (0) Processed schedules. Combining jobs from identical schedules. Tasks now: Backup files: 1 Backup DB: 1
+0000.052 (0) Requesting semaphore lock (fd) (apparently via scheduler: last_scheduled_action_called_at=1787833566, seconds_ago=1576461)
+0000.060 (0) Set semaphore last lock (fd) time to 2026-09-14 18:20:27
+0000.063 (0) Semaphore lock (fd) complete
+0000.070 (0) Backup run: resumption=0, nonce=e41d730c18f0, file_nonce=e41d730c18f0 begun at=1789410027 (0s ago), job type=backup
+0000.074 (0) Scheduling a resumption (1) after 300 seconds (1789410327) in case this run gets aborted
+0000.126 (0) Checking if we have a zip executable available
+0000.131 (0) Creation of backups of directories: beginning
+0000.139 (0) No backup of plugins: excluded by user's options
+0000.141 (0) No backup of themes: excluded by user's options
+0000.144 (0) No backup of uploads: excluded by user's options
+0000.146 (0) No backup of mu-plugins: excluded by user's options
+0000.148 (0) No backup of others: excluded by user's options
+0000.156 (0) Saving backup status to database (elements: 0)
+0000.168 (0) Beginning creation of database dump (WordPress DB)
+0000.170 (0) SQL compatibility mode is: NO_ZERO_IN_DATE,NO_ENGINE_SUBSTITUTION
+0000.267 (0) Table wp_options: Total expected rows (via COUNT): 339
+0000.269 (0) Table is relatively small; fetch_rows will thus be: 500 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0000.289 (0) Table wp_options: Rows added in this batch (next record: 65213): 335 (uncompressed bytes in this segment=443899) in 0.05 seconds
+0000.303 (0) Table wp_options: finishing file(s) (2, 52.1 KB)
+0000.317 (0) Table wp_users: Total expected rows (via COUNT): 1
+0000.320 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0000.325 (0) Table wp_users: Rows added in this batch (next record: 1): 1 (uncompressed bytes in this segment=1224) in 0.02 seconds
+0000.337 (0) Table wp_users: finishing file(s) (2, 0.6 KB)
+0000.355 (0) Table wp_usermeta: Total expected rows (via COUNT): 36
+0000.357 (0) Table is relatively small; fetch_rows will thus be: 50 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0000.362 (0) Table wp_usermeta: Rows added in this batch (next record: 38): 36 (uncompressed bytes in this segment=8421) in 0.02 seconds
+0000.375 (0) Table wp_usermeta: finishing file(s) (2, 3 KB)
+0000.395 (0) Table wp_actionscheduler_actions: Total expected rows (via COUNT): 40
+0000.398 (0) Table is relatively small; fetch_rows will thus be: 50 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0000.402 (0) Table wp_actionscheduler_actions: Rows added in this batch (next record: 7313): 40 (uncompressed bytes in this segment=21268) in 0.02 seconds
+0000.416 (0) Table wp_actionscheduler_actions: finishing file(s) (2, 2.1 KB)
+0000.431 (0) Table wp_actionscheduler_claims: Total expected rows (via COUNT): 0
+0000.436 (0) Table wp_actionscheduler_claims: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=627) in 0.01 seconds
+0000.447 (0) Table wp_actionscheduler_claims: finishing file(s) (2, 0.4 KB)
+0000.462 (0) Table wp_actionscheduler_groups: Total expected rows (via COUNT): 4
+0000.465 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0000.472 (0) Table wp_actionscheduler_groups: Rows added in this batch (next record: 4): 4 (uncompressed bytes in this segment=721) in 0.02 seconds
+0000.486 (0) Table wp_actionscheduler_groups: finishing file(s) (2, 0.4 KB)
+0000.502 (0) Table wp_actionscheduler_logs: Total expected rows (via COUNT): 94
+0000.504 (0) Table is relatively small; fetch_rows will thus be: 100 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0000.511 (0) Table wp_actionscheduler_logs: Rows added in this batch (next record: 20899): 94 (uncompressed bytes in this segment=9003) in 0.02 seconds
+0000.524 (0) Table wp_actionscheduler_logs: finishing file(s) (2, 1.3 KB)
+0000.548 (0) Table wp_commentmeta: Total expected rows (via COUNT): 0
+0000.553 (0) Table wp_commentmeta: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=653) in 0.02 seconds
+0000.566 (0) Table wp_commentmeta: finishing file(s) (2, 0.4 KB)
+0000.582 (0) Table wp_comments: Total expected rows (via COUNT): 0
+0000.587 (0) Table wp_comments: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=1467) in 0.01 seconds
+0000.601 (0) Table wp_comments: finishing file(s) (2, 0.5 KB)
+0000.623 (0) Table wp_links: Total expected rows (via COUNT): 0
+0000.626 (0) Table wp_links: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=1027) in 0.01 seconds
+0000.638 (0) Table wp_links: finishing file(s) (2, 0.5 KB)
+0000.663 (0) Table wp_postmeta: Total expected rows (approximate): 1777
+0000.691 (0) Table wp_postmeta: Rows added in this batch (next record: 2236): 1812 (uncompressed bytes in this segment=291484) in 0.05 seconds
+0000.703 (0) Table wp_postmeta: finishing file(s) (2, 43.4 KB)
+0000.735 (0) Table wp_posts: Total expected rows (via COUNT): 351
+0000.738 (0) Table is relatively small; fetch_rows will thus be: 500 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0000.755 (0) Table wp_posts: Rows added in this batch (next record: 468): 351 (uncompressed bytes in this segment=295098) in 0.05 seconds
+0000.768 (0) Table wp_posts: finishing file(s) (2, 31.4 KB)
+0000.782 (0) Table wp_term_relationships: Total expected rows (approximate): 65
+0000.788 (0) Table wp_term_relationships: Rows added in this batch (next record: 100000): 68 (uncompressed bytes in this segment=1630) in 0.01 seconds
+0000.801 (0) Table wp_term_relationships: finishing file(s) (2, 0.6 KB)
+0000.818 (0) Table wp_term_taxonomy: Total expected rows (via COUNT): 8
+0000.820 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0000.825 (0) Table wp_term_taxonomy: Rows added in this batch (next record: 8): 8 (uncompressed bytes in this segment=1814) in 0.02 seconds
+0000.837 (0) Table wp_term_taxonomy: finishing file(s) (2, 0.9 KB)
+0000.854 (0) Table wp_termmeta: Total expected rows (via COUNT): 0
+0000.859 (0) Table wp_termmeta: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=607) in 0.01 seconds
+0000.870 (0) Table wp_termmeta: finishing file(s) (2, 0.4 KB)
+0000.883 (0) Table wp_terms: Total expected rows (via COUNT): 8
+0000.885 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0000.889 (0) Table wp_terms: Rows added in this batch (next record: 8): 8 (uncompressed bytes in this segment=997) in 0.01 seconds
+0000.900 (0) Table wp_terms: finishing file(s) (2, 0.6 KB)
+0000.917 (0) Table wp_aioseo_ai_insights_keyword_reports: Total expected rows (via COUNT): 0
+0000.921 (0) Table wp_aioseo_ai_insights_keyword_reports: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=1042) in 0.01 seconds
+0000.934 (0) Table wp_aioseo_ai_insights_keyword_reports: finishing file(s) (2, 0.5 KB)
+0000.951 (0) Table wp_aioseo_cache: Total expected rows (via COUNT): 9
+0000.953 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0000.958 (0) Table wp_aioseo_cache: Rows added in this batch (next record: 150): 9 (uncompressed bytes in this segment=19721) in 0.02 seconds
+0000.974 (0) Table wp_aioseo_cache: finishing file(s) (2, 6.1 KB)
+0000.989 (0) Table wp_aioseo_crawl_cleanup_blocked_args: Total expected rows (via COUNT): 0
+0000.994 (0) Table wp_aioseo_crawl_cleanup_blocked_args: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=955) in 0.01 seconds
+0001.005 (0) Table wp_aioseo_crawl_cleanup_blocked_args: finishing file(s) (2, 0.4 KB)
+0001.019 (0) Table wp_aioseo_crawl_cleanup_logs: Total expected rows (via COUNT): 0
+0001.022 (0) Table wp_aioseo_crawl_cleanup_logs: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=772) in 0.01 seconds
+0001.034 (0) Table wp_aioseo_crawl_cleanup_logs: finishing file(s) (2, 0.4 KB)
+0001.056 (0) Table wp_aioseo_notifications: Total expected rows (via COUNT): 16
+0001.058 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0001.069 (0) Table wp_aioseo_notifications: Rows added in this batch (next record: 17): 16 (uncompressed bytes in this segment=74460) in 0.03 seconds
+0001.082 (0) Table wp_aioseo_notifications: finishing file(s) (2, 46.9 KB)
+0001.104 (0) Table wp_aioseo_posts: Total expected rows (via COUNT): 205
+0001.105 (0) Table is relatively small; fetch_rows will thus be: 250 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0001.120 (0) Table wp_aioseo_posts: Rows added in this batch (next record: 222): 205 (uncompressed bytes in this segment=210770) in 0.03 seconds
+0001.131 (0) Table wp_aioseo_posts: finishing file(s) (2, 6.9 KB)
+0001.145 (0) Table wp_aioseo_seo_analyzer_results: Total expected rows (via COUNT): 0
+0001.148 (0) Table wp_aioseo_seo_analyzer_results: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=760) in 0.01 seconds
+0001.157 (0) Table wp_aioseo_seo_analyzer_results: finishing file(s) (2, 0.4 KB)
+0001.170 (0) Table wp_aioseo_writing_assistant_keywords: Total expected rows (via COUNT): 0
+0001.172 (0) Table wp_aioseo_writing_assistant_keywords: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=1024) in 0.01 seconds
+0001.183 (0) Table wp_aioseo_writing_assistant_keywords: finishing file(s) (2, 0.5 KB)
+0001.194 (0) Table wp_aioseo_writing_assistant_posts: Total expected rows (via COUNT): 0
+0001.197 (0) Table wp_aioseo_writing_assistant_posts: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=924) in 0.01 seconds
+0001.205 (0) Table wp_aioseo_writing_assistant_posts: finishing file(s) (2, 0.4 KB)
+0001.225 (0) Table wp_cf7_views_entries: Total expected rows (via COUNT): 42
+0001.227 (0) Table is relatively small; fetch_rows will thus be: 50 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0001.240 (0) Table wp_cf7_views_entries: Rows added in this batch (next record: 42): 42 (uncompressed bytes in this segment=189301) in 0.03 seconds
+0001.253 (0) Table wp_cf7_views_entries: finishing file(s) (2, 118.7 KB)
+0001.278 (0) Table wp_wpfm_backup: Total expected rows (via COUNT): 0
+0001.289 (0) Table wp_wpfm_backup: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=478) in 0.02 seconds
+0001.301 (0) Table wp_wpfm_backup: finishing file(s) (2, 0.3 KB)
+0001.318 (0) Table wp_wpforms_logs: Total expected rows (via COUNT): 0
+0001.322 (0) Table wp_wpforms_logs: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=659) in 0.01 seconds
+0001.336 (0) Table wp_wpforms_logs: finishing file(s) (2, 0.4 KB)
+0001.353 (0) Table wp_wpforms_payment_meta: Total expected rows (via COUNT): 0
+0001.356 (0) Table wp_wpforms_payment_meta: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=690) in 0.01 seconds
+0001.367 (0) Table wp_wpforms_payment_meta: finishing file(s) (2, 0.4 KB)
+0001.381 (0) Table wp_wpforms_payments: Total expected rows (via COUNT): 0
+0001.385 (0) Table wp_wpforms_payments: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=1650) in 0.01 seconds
+0001.394 (0) Table wp_wpforms_payments: finishing file(s) (2, 0.6 KB)
+0001.409 (0) Table wp_wpforms_tasks_meta: Total expected rows (via COUNT): 2
+0001.410 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0001.426 (0) Table wp_wpforms_tasks_meta: Rows added in this batch (next record: 2): 2 (uncompressed bytes in this segment=745) in 0.02 seconds
+0001.440 (0) Table wp_wpforms_tasks_meta: finishing file(s) (2, 0.4 KB)
+0001.453 (0) Table wp_wpmailsmtp_debug_events: Total expected rows (via COUNT): 8
+0001.455 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0001.458 (0) Table wp_wpmailsmtp_debug_events: Rows added in this batch (next record: 8): 8 (uncompressed bytes in this segment=3739) in 0.01 seconds
+0001.468 (0) Table wp_wpmailsmtp_debug_events: finishing file(s) (2, 0.7 KB)
+0001.484 (0) Table wp_wpmailsmtp_tasks_meta: Total expected rows (via COUNT): 0
+0001.488 (0) Table wp_wpmailsmtp_tasks_meta: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=561) in 0.01 seconds
+0001.501 (0) Table wp_wpmailsmtp_tasks_meta: finishing file(s) (2, 0.3 KB)
+0001.515 (0) Table wp_yoast_expiring_store: Total expected rows (approximate): 0
+0001.519 (0) Table wp_yoast_expiring_store: Rows added in this batch (next record: 0): 0 (uncompressed bytes in this segment=533) in 0.01 seconds
+0001.529 (0) Table wp_yoast_expiring_store: finishing file(s) (2, 0.3 KB)
+0001.550 (0) Table wp_yoast_indexable: Total expected rows (via COUNT): 13
+0001.552 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0001.557 (0) Table wp_yoast_indexable: Rows added in this batch (next record: 13): 13 (uncompressed bytes in this segment=9128) in 0.02 seconds
+0001.570 (0) Table wp_yoast_indexable: finishing file(s) (2, 1.9 KB)
+0001.583 (0) Table wp_yoast_indexable_hierarchy: Total expected rows (approximate): 11
+0001.588 (0) Table wp_yoast_indexable_hierarchy: Rows added in this batch (next record: 1000): 11 (uncompressed bytes in this segment=968) in 0.01 seconds
+0001.598 (0) Table wp_yoast_indexable_hierarchy: finishing file(s) (2, 0.4 KB)
+0001.612 (0) Table wp_yoast_migrations: Total expected rows (via COUNT): 26
+0001.614 (0) Table is relatively small; fetch_rows will thus be: 50 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0001.618 (0) Table wp_yoast_migrations: Rows added in this batch (next record: 26): 26 (uncompressed bytes in this segment=1243) in 0.01 seconds
+0001.631 (0) Table wp_yoast_migrations: finishing file(s) (2, 0.6 KB)
+0001.652 (0) Table wp_yoast_primary_term: Total expected rows (via COUNT): 0
+0001.657 (0) Table wp_yoast_primary_term: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=829) in 0.01 seconds
+0001.693 (0) Table wp_yoast_primary_term: finishing file(s) (2, 0.4 KB)
+0001.723 (0) Table wp_yoast_seo_links: Total expected rows (via COUNT): 0
+0001.726 (0) Table wp_yoast_seo_links: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=1091) in 0.02 seconds
+0001.738 (0) Table wp_yoast_seo_links: finishing file(s) (2, 0.4 KB)
+0001.743 (0) backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db-table-wp_options.table.tmpr65214.gz (1/39/fopen): adding to final database dump
+0001.747 (0) backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db-table-wp_options.table.gz (2/39/fopen): adding to final database dump
+0001.749 (0) backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db-table-wp_users.table.tmpr2.gz (3/39/fopen): adding to final database dump
+0001.752 (0) backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db-table-wp_users.table.gz (4/39/fopen): adding to final database dump
+0001.754 (0) backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db-table-wp_usermeta.table.tmpr39.gz (5/39/fopen): adding to final database dump
+0001.757 (0) backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db-table-wp_usermeta.table.gz (6/39/fopen): adding to final database dump
+0001.759 (0) backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db-table-wp_actionscheduler_actions.table.tmpr7314.gz (7/39/fopen): adding to final database dump
+0001.763 (0) backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db-table-wp_actionscheduler_actions.table.gz (8/39/fopen): adding to final database dump
+0001.765 (0) backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db-table-wp_actionscheduler_claims.table.tmpr0.gz (9/39/fopen): adding to final database dump
+0001.767 (0) backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db-table-wp_actionscheduler_claims.table.gz (10/39/fopen): adding to final database dump
+0001.770 (0) backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db-table-wp_actionscheduler_groups.table.tmpr5.gz (11/39/fopen): adding to final database dump
+0001.773 (0) backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db-table-wp_actionscheduler_groups.table.gz (12/39/fopen): adding to final database dump
+0001.775 (0) backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db-table-wp_actionscheduler_logs.table.tmpr20900.gz (13/39/fopen): adding to final database dump
+0001.778 (0) backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db-table-wp_actionscheduler_logs.table.gz (14/39/fopen): adding to final database dump
+0001.780 (0) backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db-table-wp_commentmeta.table.tmpr0.gz (15/39/fopen): adding to final database dump
+0001.783 (0) backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db-table-wp_commentmeta.table.gz (16/39/fopen): adding to final database dump
+0001.785 (0) backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db-table-wp_comments.table.tmpr0.gz (17/39/fopen): adding to final database dump
+0001.788 (0) backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db-table-wp_comments.table.gz (18/39/fopen): adding to final database dump
+0001.791 (0) backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db-table-wp_links.table.tmpr0.gz (19/39/fopen): adding to final database dump
+0001.793 (0) backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db-table-wp_links.table.gz (20/39/fopen): adding to final database dump
+0001.796 (0) backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db-table-wp_postmeta.table.tmpr2237.gz (21/39/fopen): adding to final database dump
+0001.799 (0) backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db-table-wp_postmeta.table.gz (22/39/fopen): adding to final database dump
+0001.801 (0) backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db-table-wp_posts.table.tmpr469.gz (23/39/fopen): adding to final database dump
+0001.805 (0) backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db-table-wp_posts.table.gz (24/39/fopen): adding to final database dump
+0001.807 (0) backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db-table-wp_term_relationships.table.tmpr100001.gz (25/39/fopen): adding to final database dump
+0001.810 (0) backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db-table-wp_term_relationships.table.gz (26/39/fopen): adding to final database dump
+0001.813 (0) backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db-table-wp_term_taxonomy.table.tmpr9.gz (27/39/fopen): adding to final database dump
+0001.815 (0) backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db-table-wp_term_taxonomy.table.gz (28/39/fopen): adding to final database dump
+0001.817 (0) backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db-table-wp_termmeta.table.tmpr0.gz (29/39/fopen): adding to final database dump
+0001.818 (0) backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db-table-wp_termmeta.table.gz (30/39/fopen): adding to final database dump
+0001.820 (0) backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db-table-wp_terms.table.tmpr9.gz (31/39/fopen): adding to final database dump
+0001.822 (0) backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db-table-wp_terms.table.gz (32/39/fopen): adding to final database dump
+0001.825 (0) backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db-table-wp_aioseo_ai_insights_keyword_reports.table.tmpr0.gz (33/39/fopen): adding to final database dump
+0001.828 (0) backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db-table-wp_aioseo_ai_insights_keyword_reports.table.gz (34/39/fopen): adding to final database dump
+0001.830 (0) backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db-table-wp_aioseo_cache.table.tmpr151.gz (35/39/fopen): adding to final database dump
+0001.832 (0) backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db-table-wp_aioseo_cache.table.gz (36/39/fopen): adding to final database dump
+0001.834 (0) backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db-table-wp_aioseo_crawl_cleanup_blocked_args.table.tmpr0.gz (37/39/fopen): adding to final database dump
+0001.836 (0) backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db-table-wp_aioseo_crawl_cleanup_blocked_args.table.gz (38/39/fopen): adding to final database dump
+0001.839 (0) backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db-table-wp_aioseo_crawl_cleanup_logs.table.tmpr0.gz (39/39/fopen): adding to final database dump
+0001.841 (0) backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db-table-wp_aioseo_crawl_cleanup_logs.table.gz (40/39/fopen): adding to final database dump
+0001.843 (0) backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db-table-wp_aioseo_notifications.table.tmpr18.gz (41/39/fopen): adding to final database dump
+0001.846 (0) backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db-table-wp_aioseo_notifications.table.gz (42/39/fopen): adding to final database dump
+0001.848 (0) backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db-table-wp_aioseo_posts.table.tmpr223.gz (43/39/fopen): adding to final database dump
+0001.851 (0) backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db-table-wp_aioseo_posts.table.gz (44/39/fopen): adding to final database dump
+0001.853 (0) backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db-table-wp_aioseo_seo_analyzer_results.table.tmpr0.gz (45/39/fopen): adding to final database dump
+0001.856 (0) backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db-table-wp_aioseo_seo_analyzer_results.table.gz (46/39/fopen): adding to final database dump
+0001.858 (0) backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db-table-wp_aioseo_writing_assistant_keywords.table.tmpr0.gz (47/39/fopen): adding to final database dump
+0001.860 (0) backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db-table-wp_aioseo_writing_assistant_keywords.table.gz (48/39/fopen): adding to final database dump
+0001.862 (0) backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db-table-wp_aioseo_writing_assistant_posts.table.tmpr0.gz (49/39/fopen): adding to final database dump
+0001.865 (0) backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db-table-wp_aioseo_writing_assistant_posts.table.gz (50/39/fopen): adding to final database dump
+0001.868 (0) backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db-table-wp_cf7_views_entries.table.tmpr43.gz (51/39/fopen): adding to final database dump
+0001.873 (0) backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db-table-wp_cf7_views_entries.table.gz (52/39/fopen): adding to final database dump
+0001.876 (0) backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db-table-wp_wpfm_backup.table.tmpr0.gz (53/39/fopen): adding to final database dump
+0001.878 (0) backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db-table-wp_wpfm_backup.table.gz (54/39/fopen): adding to final database dump
+0001.881 (0) backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db-table-wp_wpforms_logs.table.tmpr0.gz (55/39/fopen): adding to final database dump
+0001.884 (0) backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db-table-wp_wpforms_logs.table.gz (56/39/fopen): adding to final database dump
+0001.885 (0) backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db-table-wp_wpforms_payment_meta.table.tmpr0.gz (57/39/fopen): adding to final database dump
+0001.887 (0) backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db-table-wp_wpforms_payment_meta.table.gz (58/39/fopen): adding to final database dump
+0001.889 (0) backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db-table-wp_wpforms_payments.table.tmpr0.gz (59/39/fopen): adding to final database dump
+0001.892 (0) backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db-table-wp_wpforms_payments.table.gz (60/39/fopen): adding to final database dump
+0001.893 (0) backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db-table-wp_wpforms_tasks_meta.table.tmpr3.gz (61/39/fopen): adding to final database dump
+0001.895 (0) backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db-table-wp_wpforms_tasks_meta.table.gz (62/39/fopen): adding to final database dump
+0001.897 (0) backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db-table-wp_wpmailsmtp_debug_events.table.tmpr9.gz (63/39/fopen): adding to final database dump
+0001.899 (0) backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db-table-wp_wpmailsmtp_debug_events.table.gz (64/39/fopen): adding to final database dump
+0001.901 (0) backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db-table-wp_wpmailsmtp_tasks_meta.table.tmpr0.gz (65/39/fopen): adding to final database dump
+0001.903 (0) backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db-table-wp_wpmailsmtp_tasks_meta.table.gz (66/39/fopen): adding to final database dump
+0001.905 (0) backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db-table-wp_yoast_expiring_store.table.tmpr1.gz (67/39/fopen): adding to final database dump
+0001.907 (0) backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db-table-wp_yoast_expiring_store.table.gz (68/39/fopen): adding to final database dump
+0001.909 (0) backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db-table-wp_yoast_indexable.table.tmpr14.gz (69/39/fopen): adding to final database dump
+0001.912 (0) backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db-table-wp_yoast_indexable.table.gz (70/39/fopen): adding to final database dump
+0001.914 (0) backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db-table-wp_yoast_indexable_hierarchy.table.tmpr1001.gz (71/39/fopen): adding to final database dump
+0001.916 (0) backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db-table-wp_yoast_indexable_hierarchy.table.gz (72/39/fopen): adding to final database dump
+0001.919 (0) backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db-table-wp_yoast_migrations.table.tmpr27.gz (73/39/fopen): adding to final database dump
+0001.921 (0) backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db-table-wp_yoast_migrations.table.gz (74/39/fopen): adding to final database dump
+0001.923 (0) backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db-table-wp_yoast_primary_term.table.tmpr0.gz (75/39/fopen): adding to final database dump
+0001.925 (0) backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db-table-wp_yoast_primary_term.table.gz (76/39/fopen): adding to final database dump
+0001.926 (0) backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db-table-wp_yoast_seo_links.table.tmpr0.gz (77/39/fopen): adding to final database dump
+0001.927 (0) backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db-table-wp_yoast_seo_links.table.gz (78/39/fopen): adding to final database dump
+0001.978 (0) backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db.gz: finished writing out complete database file (326.8 KB)
+0002.002 (0) Total database tables backed up: 39 (backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db.gz, size: 334790, sha1: b73626d710af7e7071cad43916a2809e1c0c5bfa, sha256: 413f600b6c813a91d39e4aff580f647b42d2fb15150c79b213ff7ac5d608f547)
+0002.019 (0) backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db.gz: db: This file has not yet been successfully uploaded: will queue
+0002.021 (0) Saving backup history. Total backup size: 326.9 KB
+0002.030 (0) Requesting upload of the files that have not yet been successfully uploaded (1)
+0002.035 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0002.037 (0) No remote despatch: user chose no remote backup service
+0002.039 (0) Recording as successfully uploaded: backup_2026-09-14-1820_Alpine_Heating_amp_Air_Conditi_e41d730c18f0-db.gz
+0002.043 (0) Prune old backups from local store: nothing to do, since the user disabled local deletion and we are using local backups
+0002.044 (0) Resume backup (e41d730c18f0, 0): finish run
+0002.049 (0) Decremented the semaphore (fd) by 1
+0002.052 (0) Semaphore (fd) unlocked
+0002.054 (0) There were no errors in the uploads, so the 'resume' event (1) is being unscheduled
+0002.059 (0) No email will/can be sent - the user has not configured an email address.
+0002.061 (0) The backup succeeded and is now complete
