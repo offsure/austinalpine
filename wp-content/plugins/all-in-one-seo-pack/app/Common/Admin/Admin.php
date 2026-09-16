@@ -429,7 +429,9 @@ class Admin {
 				'wp-api',
 				'wp-editor',
 				'wp-hooks',
-				'lodash'
+				'lodash',
+				// The bundled JSX runtime reads the React global directly.
+				'react'
 			],
 			aioseo()->version,
 			true

@@ -728,6 +728,7 @@ body {
   }
 
   .hero-form-wrap textarea {
+    height: 60px;
     min-height: 60px;
   }
 }
@@ -1019,8 +1020,10 @@ body {
   background: #ffffff;
 }
 
+/* CF7 renders textareas with rows="10"; size for ~2 lines since most messages are short. */
 .hero-form-wrap textarea {
-  min-height: 78px;
+  height: 62px;
+  min-height: 62px;
   resize: vertical;
 }
 
@@ -6171,7 +6174,8 @@ body.service-page {
 }
 
 .contact-form textarea.form-control {
-  min-height: 150px;
+  height: 80px;
+  min-height: 80px;
   resize: vertical;
 }
 
