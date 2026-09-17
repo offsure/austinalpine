@@ -462,6 +462,7 @@ require_once get_stylesheet_directory() . '/inc/projects-seo.php';
 require_once get_stylesheet_directory() . '/inc/projects-gallery.php';
 require_once get_stylesheet_directory() . '/inc/sms-consent.php';
 require_once get_stylesheet_directory() . '/inc/privacy-policy.php';
+require_once get_stylesheet_directory() . '/inc/sms-terms.php';
 
 /**
  * Resolve a page ID from one or more possible slugs.

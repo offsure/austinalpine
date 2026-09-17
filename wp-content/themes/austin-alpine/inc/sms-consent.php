@@ -19,7 +19,7 @@ function alpine_get_sms_consent_privacy_url() {
 
 function alpine_get_sms_consent_markup() {
     return sprintf(
-        '<p class="alpine-sms-consent">By submitting this form, you agree to receive SMS informational text messages from Alpine Heating and Air Conditioning, LLC at the number provided. Consent is not a condition of purchase. Message frequency may vary. Standard message and data rates may apply. We will not share your mobile information with third parties for marketing purposes. Reply STOP to opt-out at any time. Refer to our <a href="%s">Privacy Policy</a> for details on SMS alerts.</p>',
+        '<p class="alpine-sms-consent"><span class="wpcf7-form-control-wrap" data-name="sms-consent"><label class="alpine-sms-consent-label"><input type="checkbox" name="sms-consent" value="1" class="alpine-sms-consent-checkbox wpcf7-form-control" required aria-required="true" aria-invalid="false"> <span>By submitting this form, you agree to receive SMS informational text messages from Alpine Heating and Air Conditioning, LLC at the number provided. Consent is not a condition of purchase. Message frequency may vary. Standard message and data rates may apply. We will not share your mobile information with third parties for marketing purposes. Reply STOP to opt out or HELP for help. Refer to our <a href="%s">Privacy Policy</a> for details on SMS alerts.</span></label></span></p>',
         esc_url(alpine_get_sms_consent_privacy_url())
     );
 }
@@ -95,3 +95,37 @@ function alpine_insert_sms_consent_into_cf7_form($form_html) {
 }
 // After alpine_replace_recaptcha_v2_form_tokens (30) so the widget markup is final.
 add_filter('wpcf7_form_elements', 'alpine_insert_sms_consent_into_cf7_form', 40);
+
+/**
+ * Enforce consent on the server as CF7 submits forms without native validation.
+ */
+function alpine_validate_sms_consent($result) {
+    $contact_form = wpcf7_get_current_contact_form();
+
+    if (!$contact_form instanceof WPCF7_ContactForm) {
+        return $result;
+    }
+
+    $template = (string) $contact_form->prop('form');
+    $has_consent = false !== strpos(alpine_insert_sms_consent_into_cf7_form($template), 'alpine-sms-consent-checkbox');
+
+    foreach ($contact_form->scan_form_tags() as $tag) {
+        if (in_array($tag->type, array('sms_consent', 'sms-consent'), true)) {
+            $has_consent = true;
+            break;
+        }
+    }
+
+    $submission = WPCF7_Submission::get_instance();
+
+    if ($has_consent && (!$submission || '1' !== $submission->get_posted_data('sms-consent'))) {
+        $result->invalidate(array(
+            'type' => 'checkbox*',
+            'basetype' => 'checkbox',
+            'name' => 'sms-consent',
+        ), 'Please check the SMS consent checkbox before submitting.');
+    }
+
+    return $result;
+}
+add_filter('wpcf7_validate', 'alpine_validate_sms_consent', 20);
