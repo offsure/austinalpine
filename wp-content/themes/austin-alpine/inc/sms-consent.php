@@ -1,14 +1,18 @@
 <?php
 /**
- * SMS consent disclaimer for Contact Form 7 forms.
+ * SMS consent opt-ins for Contact Form 7 forms.
  *
- * Every CF7 form that collects a phone number gets the disclaimer automatically,
+ * Two separate, optional checkboxes: transactional service updates and
+ * promotional messages. Keeping them apart is the point — consent to one is
+ * never consent to the other, and neither is required to submit the form.
+ *
+ * Every CF7 form that collects a phone number gets them automatically,
  * inserted directly before the reCAPTCHA widget (or before the submit button
- * when a form has no CAPTCHA). New forms inherit it with no extra work.
+ * when a form has no CAPTCHA). New forms inherit them with no extra work.
  *
- * A form that needs the disclaimer somewhere else can place the [sms_consent]
- * form-tag in its template; the auto-insert sees the rendered disclaimer and
- * skips that form, so it never appears twice.
+ * A form that needs them somewhere else can place the [sms_consent] form-tag in
+ * its template; the auto-insert sees the rendered block and skips that form, so
+ * it never appears twice.
  */
 
 function alpine_get_sms_consent_privacy_url() {
@@ -17,9 +21,43 @@ function alpine_get_sms_consent_privacy_url() {
     return $url ? $url : home_url('/privacy-policy/');
 }
 
+/**
+ * The two opt-ins, kept separate so a customer can accept service messages
+ * without accepting marketing. Both are optional: neither is enforced on
+ * submit, and unchecking both must not block the form.
+ */
+function alpine_get_sms_consent_options() {
+    return array(
+        array(
+            'name'  => 'sms-consent-service',
+            'title' => 'Service Updates (Optional)',
+            'text'  => 'I agree to receive SMS messages from Alpine Heating and Air Conditioning regarding appointments, technician arrivals, service updates and customer support. Message frequency varies. Message and data rates may apply. Reply STOP to opt out or HELP for help.',
+        ),
+        array(
+            'name'  => 'sms-consent-promotional',
+            'title' => 'Promotional Messages (Optional)',
+            'text'  => 'I agree to receive promotional SMS messages from Alpine Heating and Air Conditioning, including special offers, discounts and seasonal maintenance promotions. Message frequency varies. Message and data rates may apply. Reply STOP to opt out or HELP for help. Consent is not a condition of purchase.',
+        ),
+    );
+}
+
 function alpine_get_sms_consent_markup() {
+    $rows = '';
+
+    foreach (alpine_get_sms_consent_options() as $option) {
+        $rows .= sprintf(
+            '<span class="wpcf7-form-control-wrap" data-name="%1$s"><label class="alpine-sms-consent-label"><input type="checkbox" name="%1$s" value="1" class="alpine-sms-consent-checkbox wpcf7-form-control"> <span class="alpine-sms-consent-text"><strong class="alpine-sms-consent-title">%2$s</strong> %3$s</span></label></span>',
+            esc_attr($option['name']),
+            esc_html($option['title']),
+            esc_html($option['text'])
+        );
+    }
+
+    // A span, not a div: CF7 wraps rendered tags in <p>, and a block-level
+    // element there makes the browser close the paragraph early.
     return sprintf(
-        '<p class="alpine-sms-consent"><span class="wpcf7-form-control-wrap" data-name="sms-consent"><label class="alpine-sms-consent-label"><input type="checkbox" name="sms-consent" value="1" class="alpine-sms-consent-checkbox wpcf7-form-control" required aria-required="true" aria-invalid="false"> <span>By submitting this form, you agree to receive SMS informational text messages from Alpine Heating and Air Conditioning, LLC at the number provided. Consent is not a condition of purchase. Message frequency may vary. Standard message and data rates may apply. We will not share your mobile information with third parties for marketing purposes. Reply STOP to opt out or HELP for help. Refer to our <a href="%s">Privacy Policy</a> for details on SMS alerts.</span></label></span></p>',
+        '<span class="alpine-sms-consent">%s<span class="alpine-sms-consent-privacy">See our <a href="%s">Privacy Policy</a> for details on SMS alerts.</span></span>',
+        $rows,
         esc_url(alpine_get_sms_consent_privacy_url())
     );
 }
@@ -97,35 +135,7 @@ function alpine_insert_sms_consent_into_cf7_form($form_html) {
 add_filter('wpcf7_form_elements', 'alpine_insert_sms_consent_into_cf7_form', 40);
 
 /**
- * Enforce consent on the server as CF7 submits forms without native validation.
+ * Both opt-ins are optional, so there is deliberately no wpcf7_validate filter
+ * here: a submission with neither box checked is valid. The checked values ride
+ * along in the posted data under sms-consent-service / sms-consent-promotional.
  */
-function alpine_validate_sms_consent($result) {
-    $contact_form = wpcf7_get_current_contact_form();
-
-    if (!$contact_form instanceof WPCF7_ContactForm) {
-        return $result;
-    }
-
-    $template = (string) $contact_form->prop('form');
-    $has_consent = false !== strpos(alpine_insert_sms_consent_into_cf7_form($template), 'alpine-sms-consent-checkbox');
-
-    foreach ($contact_form->scan_form_tags() as $tag) {
-        if (in_array($tag->type, array('sms_consent', 'sms-consent'), true)) {
-            $has_consent = true;
-            break;
-        }
-    }
-
-    $submission = WPCF7_Submission::get_instance();
-
-    if ($has_consent && (!$submission || '1' !== $submission->get_posted_data('sms-consent'))) {
-        $result->invalidate(array(
-            'type' => 'checkbox*',
-            'basetype' => 'checkbox',
-            'name' => 'sms-consent',
-        ), 'Please check the SMS consent checkbox before submitting.');
-    }
-
-    return $result;
-}
-add_filter('wpcf7_validate', 'alpine_validate_sms_consent', 20);
