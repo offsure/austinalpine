@@ -461,6 +461,7 @@ require_once get_stylesheet_directory() . '/inc/projects-render.php';
 require_once get_stylesheet_directory() . '/inc/projects-seo.php';
 require_once get_stylesheet_directory() . '/inc/projects-gallery.php';
 require_once get_stylesheet_directory() . '/inc/sms-consent.php';
+require_once get_stylesheet_directory() . '/inc/sms-consent-log.php';
 require_once get_stylesheet_directory() . '/inc/privacy-policy.php';
 require_once get_stylesheet_directory() . '/inc/sms-terms.php';
 
@@ -1913,6 +1914,9 @@ CF7;
 function alpine_get_homepage_hero_cf7_mail_template() {
     return array(
         'active'             => true,
+        // Source of truth for the "To" field: alpine_ensure_homepage_hero_cf7_form()
+        // rewrites this form's mail settings from here on every init, so
+        // editing To in the CF7 admin does not stick.
         'recipient'          => 'info@austinalpine.com',
         'sender'             => 'Alpine Heating & Air Conditioning <wordpress@austinalpine.com>',
         'subject'            => 'Homepage hero form: [first_name]',

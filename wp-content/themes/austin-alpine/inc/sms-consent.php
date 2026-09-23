@@ -15,6 +15,15 @@
  * it never appears twice.
  */
 
+/**
+ * Wording version recorded against every logged consent. Bump it whenever the
+ * disclosure text below changes, so old log rows keep pointing at the wording
+ * that was actually on screen when the customer agreed.
+ */
+if (!defined('ALPINE_SMS_CONSENT_TEXT_VERSION')) {
+    define('ALPINE_SMS_CONSENT_TEXT_VERSION', '2026-09-23');
+}
+
 function alpine_get_sms_consent_privacy_url() {
     $url = function_exists('get_privacy_policy_url') ? get_privacy_policy_url() : '';
 
@@ -53,11 +62,20 @@ function alpine_get_sms_consent_markup() {
         );
     }
 
+    // Unchecked checkboxes post nothing, so without this marker a submission
+    // that declined both boxes is indistinguishable from a form that never
+    // showed them. The consent log needs to tell those two apart.
+    $marker = sprintf(
+        '<input type="hidden" name="sms-consent-shown" value="%s">',
+        esc_attr(ALPINE_SMS_CONSENT_TEXT_VERSION)
+    );
+
     // A span, not a div: CF7 wraps rendered tags in <p>, and a block-level
     // element there makes the browser close the paragraph early.
     return sprintf(
-        '<span class="alpine-sms-consent">%s<span class="alpine-sms-consent-privacy">See our <a href="%s">Privacy Policy</a> for details on SMS alerts.</span></span>',
+        '<span class="alpine-sms-consent">%s%s<span class="alpine-sms-consent-privacy">See our <a href="%s">Privacy Policy</a> for details on SMS alerts.</span></span>',
         $rows,
+        $marker,
         esc_url(alpine_get_sms_consent_privacy_url())
     );
 }
