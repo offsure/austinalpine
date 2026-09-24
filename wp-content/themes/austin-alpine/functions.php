@@ -517,6 +517,25 @@ function alpine_legacy_redirects() {
         wp_safe_redirect(home_url('/' . $redirects[$request_path] . '/'), 301);
         exit;
     }
+
+    // The retired generic service URLs. alpine_block_retired_url_guessing()
+    // below stops redirect_canonical() guessing a wrong slug match for these, so
+    // they reached Search Console as 404s and threw away their ranking signals.
+    // Send each to the canonical replacement alpine_get_site_page_url() already
+    // defines, and keep that guess blocker: core runs redirect_canonical() on
+    // template_redirect ahead of this callback and would otherwise win.
+    $retired_redirects = array(
+        'installation'     => 'installation',
+        'repair'           => 'repair',
+        'maintenance'      => 'maintenance',
+        'replacement'      => 'replacement',
+        'uv-light-systems' => 'indoor_air_quality',
+    );
+
+    if (isset($retired_redirects[$request_path]) && function_exists('alpine_get_site_page_url')) {
+        wp_safe_redirect(alpine_get_site_page_url($retired_redirects[$request_path]), 301);
+        exit;
+    }
 }
 add_action('template_redirect', 'alpine_legacy_redirects');
 
@@ -1138,6 +1157,96 @@ function create_business_category_pages() {
     update_option('business_category_pages_created', true);
 }
 add_action('init', 'create_business_category_pages');
+
+/**
+ * Publish any service or business-category page whose content lives in the
+ * theme but whose WordPress page is missing.
+ *
+ * create_business_category_pages() above guards on a one-shot option, so slugs
+ * added to its data array after it first ran never received a page, and the
+ * service pages were never provisioned at all. Both gaps surface in Search
+ * Console as 404s for URLs this theme holds finished content for. This routine
+ * guards on a version string instead: bump ALPINE_TEMPLATED_PAGES_VERSION to
+ * publish slugs added later.
+ */
+define('ALPINE_TEMPLATED_PAGES_VERSION', '2026-09-24');
+
+/**
+ * Free a page slug that a media attachment is holding.
+ *
+ * /repair-service/ 301s to repair-service.webp because the attachment owns that
+ * slug. wp_unique_post_slug() counts attachments when checking hierarchical post
+ * types, so a new page would quietly become repair-service-2 and stop matching
+ * page-repair-service.php.
+ */
+function alpine_release_page_slug_from_attachment($slug) {
+    $attachment = get_page_by_path($slug, OBJECT, 'attachment');
+
+    if (!$attachment instanceof WP_Post) {
+        return;
+    }
+
+    wp_update_post(array(
+        'ID'        => $attachment->ID,
+        'post_name' => $slug . '-image',
+    ));
+}
+
+function alpine_provision_templated_pages() {
+    if (get_option('alpine_templated_pages_version') === ALPINE_TEMPLATED_PAGES_VERSION) {
+        return;
+    }
+
+    $pages = array();
+
+    if (function_exists('alpine_service_page_data')) {
+        $pages = array_merge($pages, alpine_service_page_data());
+    }
+
+    if (function_exists('alpine_business_category_page_data')) {
+        $pages = array_merge($pages, alpine_business_category_page_data());
+    }
+
+    if (empty($pages)) {
+        return; // Data not loaded; leave the version unset and retry next request.
+    }
+
+    // This content is already live at /programmable-thermostats-installation/,
+    // so publishing the longer slug as well would duplicate it.
+    $skip = array('programmable-thermostats-installation-austin-tx' => true);
+
+    foreach ($pages as $slug => $page) {
+        if (isset($skip[$slug]) || empty($page['hero_title'])) {
+            continue;
+        }
+
+        // get_page_by_path() matches attachments even when asked for pages, so an
+        // image squatting on the slug would read as an existing page here.
+        $existing = get_page_by_path($slug, OBJECT, 'page');
+
+        if ($existing instanceof WP_Post && $existing->post_type === 'page') {
+            continue;
+        }
+
+        alpine_release_page_slug_from_attachment($slug);
+
+        wp_insert_post(array(
+            'post_title'   => $page['hero_title'],
+            'post_content' => '',
+            'post_status'  => 'publish',
+            'post_type'    => 'page',
+            'post_name'    => $slug,
+        ));
+    }
+
+    // Rebuild rewrite rules once. New pages resolve without this, but the live
+    // site is missing the robots.txt rule — /robots.txt 404s there while
+    // /?robots=1 still returns valid output — and a flush restores it.
+    flush_rewrite_rules(false);
+
+    update_option('alpine_templated_pages_version', ALPINE_TEMPLATED_PAGES_VERSION);
+}
+add_action('init', 'alpine_provision_templated_pages', 20);
 
 function alpine_create_commercial_category_pages() {
     if (get_option('commercial_category_pages_created')) {
