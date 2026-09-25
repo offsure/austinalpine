@@ -19,7 +19,7 @@
  * that was actually on screen when the customer agreed.
  */
 if (!defined('ALPINE_SMS_CONSENT_TEXT_VERSION')) {
-    define('ALPINE_SMS_CONSENT_TEXT_VERSION', '2026-09-24');
+    define('ALPINE_SMS_CONSENT_TEXT_VERSION', '2026-09-25');
 }
 
 function alpine_get_sms_consent_privacy_url() {
@@ -32,11 +32,21 @@ function alpine_get_sms_consent_privacy_url() {
  * The combined opt-in is optional and is not enforced on submit.
  */
 function alpine_get_sms_consent_options() {
+    // CF7 submits through REST, where the original page query is unavailable.
+    // Use its container page so the audit log records the same business shown.
+    $submission = class_exists('WPCF7_Submission') ? WPCF7_Submission::get_instance() : null;
+    $is_commercial = $submission
+        ? 'commercial-hvac-austin-tx' === get_post_field('post_name', (int) $submission->get_meta('container_post_id'))
+        : is_page('commercial-hvac-austin-tx');
+    $business = $is_commercial
+        ? 'Alpine Commercial Services, LLC'
+        : 'Alpine Heating and Air Conditioning, LLC';
+
     return array(
         array(
             'name'  => 'sms-consent-combined',
             'title' => 'Service and Promotional SMS (Optional)',
-            'text'  => 'By submitting this form, I agree to receive service and promotional SMS from Alpine Heating and Air Conditioning, including appointment reminders, technician updates, special offers and discounts. Message frequency varies. Message and data rates may apply. Reply STOP to opt out or HELP for assistance. Consent is not required to purchase services.',
+            'text'  => 'By submitting this form, I agree to receive service and promotional SMS from ' . $business . ', including appointment reminders, technician updates, special offers and discounts. Message frequency varies. Message and data rates may apply. Reply STOP to opt out or HELP for assistance. Consent is not required to purchase services.',
         ),
     );
 }
